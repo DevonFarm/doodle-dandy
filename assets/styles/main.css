@@ -36,7 +36,7 @@ header > nav {
   padding: 0;
 }
 
-header > nav a.current {
+header > nav a.available {
   color: var(--accent) !important;
   border-color: var(--accent) !important;
 }
