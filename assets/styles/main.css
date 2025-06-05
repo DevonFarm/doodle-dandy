@@ -16,6 +16,13 @@ ul > li {
   margin: 0.5rem 0;
   font-size: 1.3rem;
 }
+.indent {
+  text-indent: 1rem; /* Adjust the value as needed */
+}
+
+.indlng {
+  text-indent: 2.2rem; /* Adjust the value as needed */
+}
 
 i.fa-pad-right {
   margin-right: 0.5rem;
@@ -46,6 +53,7 @@ header > nav a.available {
   max-width: min(550px, 100%);
   width: fit-content;
   margin: 1rem auto;
+  style="float left":
   display: block;
 }
 
