@@ -17,7 +17,8 @@ ul > li {
   font-size: 1.3rem;
 }
 .indent {
-  text-indent: 1rem; /* Adjust the value as needed */
+  margin-left: 1rem;
+  list-style: initial;
 }
 
 .indlng {
