@@ -20,7 +20,17 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: copy static files to output dir
-        run: mkdir -p output && cp -R index.html contact contract appointment assets output/
+        run: mkdir -p output && cp -R index.html \
+          about \
+          appointment \
+          assets \
+          aussiedoodle \
+          available \
+          bernedoodle \
+          contact \
+          contract \
+          reviews \
+          output/
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
         with:
