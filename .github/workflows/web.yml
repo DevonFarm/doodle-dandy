@@ -22,6 +22,7 @@ jobs:
       - name: copy static files to output dir
         run: |
           mkdir -p output && cp -R index.html \
+            sitemap.xml \
             about \
             appointment \
             assets \
