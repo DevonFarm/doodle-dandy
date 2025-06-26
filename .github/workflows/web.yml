@@ -32,6 +32,8 @@ jobs:
             contact \
             contract \
             reviews \
+            congrats \
+            puppy-guide \
             output/
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
