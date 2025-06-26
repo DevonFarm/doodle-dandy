@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grooming Resources - Doodle Dandy</title>
+    <meta
+      name="description"
+      content="Complete grooming guide for your Doodle Dandy puppy. Professional tools, techniques, and step-by-step videos for maintaining your doodle's beautiful coat."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Georgia", serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header-logo {
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 30px auto;
+        display: block;
+        animation: fadeIn 1s ease-out 0.2s both;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+      }
+
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+        padding: 40px 0;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        animation: fadeInDown 1s ease-out;
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease-out 0.3s both;
+      }
+
+      .nav-breadcrumb {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 25px;
+        border-radius: 25px;
+        margin-bottom: 30px;
+        text-align: center;
+        animation: fadeIn 1s ease-out 0.4s both;
+      }
+
+      .nav-breadcrumb a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: opacity 0.3s ease;
+      }
+
+      .nav-breadcrumb a:hover {
+        opacity: 0.8;
+      }
+
+      .content-section {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        overflow: hidden;
+        animation: fadeIn 1s ease-out 0.6s both;
+      }
+
+      .section-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .section-header h2 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      .section-header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .section-content {
+        padding: 40px;
+      }
+
+      .grooming-highlight {
+        background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        border-left: 5px solid #e17055;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .grooming-highlight h3 {
+        color: #2d3436;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .grooming-highlight p {
+        color: #2d3436;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin: 30px 0;
+      }
+
+      .product-card {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 25px;
+        border: 2px solid #e9ecef;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        border-color: #667eea;
+      }
+
+      .product-card h4 {
+        color: #495057;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+      }
+
+      .product-card p {
+        margin-bottom: 10px;
+        color: #6c757d;
+      }
+
+      .product-card .product-description {
+        font-style: italic;
+        color: #495057;
+        margin-bottom: 15px;
+      }
+
+      .product-card a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+      }
+
+      .product-card a:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .special-care-section {
+        background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .special-care-section h3 {
+        color: #2d3436;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      .special-care-section p {
+        color: #2d3436;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      .tear-stain-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .tear-option {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .video-section {
+        background: #e3f2fd;
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+      }
+
+      .video-section h3 {
+        color: #1565c0;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+      }
+
+      .video-intro {
+        background: #fff3e0;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-left: 5px solid #ff9800;
+      }
+
+      .video-intro h4 {
+        color: #e65100;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+      }
+
+      .video-intro p {
+        color: #bf360c;
+        font-weight: bold;
+      }
+
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .video-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .video-card:hover {
+        transform: scale(1.02);
+      }
+
+      .video-card iframe {
+        width: 100%;
+        height: 200px;
+        border: none;
+      }
+
+      .video-card-info {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .video-card-info h4 {
+        color: #495057;
+        margin-bottom: 10px;
+      }
+
+      .video-card-info p {
+        color: #6c757d;
+        font-size: 0.9rem;
+      }
+
+      .back-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 30px;
+      }
+
+      .back-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2.2rem;
+        }
+
+        .section-content {
+          padding: 25px 20px;
+        }
+
+        .grooming-highlight,
+        .special-care-section,
+        .video-section {
+          padding: 20px;
+        }
+
+        .product-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .video-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .video-card iframe {
+          height: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://doodledandy.dog/assets/images/header.png"
+          alt="Doodle Dandy"
+          class="header-logo"
+        />
+        <h1>✂️ Grooming Resources</h1>
+        <p>
+          Everything you need to keep your doodle's coat beautiful and healthy
+        </p>
+      </div>
+
+      <div class="nav-breadcrumb">
+        <a href="../">← Back to Puppy Guide</a>
+      </div>
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2>🏠 DIY Grooming Essentials</h2>
+          <p>
+            Professional-quality tools for caring for your baby's coat at home
+          </p>
+        </div>
+        <div class="section-content">
+          <div class="grooming-highlight">
+            <h3>✂️ Ready to Groom at Home?</h3>
+            <p>
+              <strong
+                >Caring for your doodle's coat yourself can be incredibly
+                rewarding!</strong
+              >
+              With the right tools and techniques, you can keep your baby
+              looking and feeling their best between professional grooming
+              visits.
+            </p>
+            <p>
+              We've carefully selected these professional-grade tools that will
+              make grooming easier and more effective. Quality tools make all
+              the difference in achieving professional results at home!
+            </p>
+          </div>
+
+          <div class="product-grid">
+            <div class="product-card">
+              <h4>🪮 Essential Brushes</h4>
+              <div class="product-description">
+                <p>
+                  <strong>Slicker Brush:</strong> Perfect for daily brushing and
+                  preventing mats
+                </p>
+                <p>
+                  <strong>Pin Brush:</strong> Ideal for fluffing and final
+                  grooming touches
+                </p>
+              </div>
+              <a
+                href="https://www.amazon.com/gp/product/B006Z0USK6/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1"
+                target="_blank"
+                >→ Shop Grooming Table</a
+              >
+              <a
+                href="https://www.amazon.com/gp/product/B0858ZL2P1/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1"
+                target="_blank"
+                >→ Shop Raised Bath</a
+              >
+              <a href="https://a.co/d/hxRFAsI" target="_blank"
+                >→ Shop Pin Brush</a
+              >
+            </div>
+
+            <div class="product-card">
+              <h4>🧴 Shampoo & Conditioner</h4>
+              <div class="product-description">
+                <p>
+                  Professional-quality products specially formulated for doodle
+                  coats. A little goes a long way, so we recommend starting with
+                  these convenient combination packs.
+                </p>
+              </div>
+              <a href="https://a.co/d/cYsLfP3" target="_blank"
+                >→ Shampoo & Conditioner Set #1</a
+              >
+              <a href="https://a.co/d/dTPo6Z0" target="_blank"
+                >→ Shampoo & Conditioner Set #2</a
+              >
+            </div>
+
+            <div class="product-card">
+              <h4>✂️ Professional Clippers</h4>
+              <div class="product-description">
+                <p>
+                  <strong>Andis Pulse ZR II:</strong> Professional-grade
+                  detachable blade clippers trusted by groomers worldwide.
+                  Powerful, reliable, and perfect for home use.
+                </p>
+              </div>
+              <a
+                href="https://ryanspet.com/andis-pulse-zr-ii-detachable-blade-clippers"
+                target="_blank"
+                >→ Shop Professional Clippers</a
+              >
+            </div>
+
+            <div class="product-card">
+              <h4>🔧 Clipper Blades & Maintenance</h4>
+              <div class="product-description">
+                <p>
+                  <strong>Ceramic Edge Blades:</strong> We personally recommend
+                  7FT & 5FT blades for the perfect doodle cut
+                </p>
+                <p>
+                  <strong>Maintenance Essentials:</strong> Clipper oil and cool
+                  spray to keep your equipment running smoothly
+                </p>
+              </div>
+              <a
+                href="https://ryanspet.com/andis-clipper-oil-4-oz"
+                target="_blank"
+                >→ Clipper Oil (4 oz)</a
+              >
+              <a
+                href="https://ryanspet.com/andis-cool-care-plus-15-oz"
+                target="_blank"
+                >→ Cool Care Spray (15 oz)</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2>👁️ Special Care for Light-Faced Puppies</h2>
+          <p>Gentle solutions for tear stains and facial care</p>
+        </div>
+        <div class="section-content">
+          <div class="special-care-section">
+            <h3>💧 Tear Stain Solutions</h3>
+            <p>
+              If your puppy has a very light face, they may occasionally
+              experience tear stains. Here are our gentle, effective
+              recommendations for keeping that beautiful face clean and bright.
+            </p>
+
+            <div class="tear-stain-options">
+              <div class="tear-option">
+                <h4>🍎 Natural DIY Solution</h4>
+                <p><strong>Apple Cider Vinegar Method:</strong></p>
+                <p>Mix equal parts apple cider vinegar with distilled water</p>
+                <p>Apply gently with a cotton ball</p>
+                <p>Safe, natural, and cost-effective</p>
+              </div>
+
+              <div class="tear-option">
+                <h4>🧴 Professional Product</h4>
+                <p><strong>Specialized Tear Stain Remover:</strong></p>
+                <p>
+                  Gentle, effective formula designed specifically for delicate
+                  facial areas
+                </p>
+                <a href="https://a.co/d/bjwqAl0" target="_blank"
+                  >→ Shop Tear Stain Remover</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2>🎥 Step-by-Step Grooming Videos</h2>
+          <p>Professional techniques you can master at home</p>
+        </div>
+        <div class="section-content">
+          <div class="video-section">
+            <h3>📹 Essential Grooming Tutorials</h3>
+
+            <div class="video-intro">
+              <h4>🛁 Important Reminder!</h4>
+              <p>
+                Always bathe your dog or puppy BEFORE attempting any clipping.
+                Clean, dry coat is essential for professional results!
+              </p>
+            </div>
+
+            <div class="video-grid">
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/onQkOE10QMI"
+                  title="Basic Grooming Techniques"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+                <div class="video-card-info">
+                  <h4>Basic Grooming Techniques</h4>
+                  <p>Learn the fundamentals of doodle grooming</p>
+                </div>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/sY4Oo6kjiAU"
+                  title="Face and Head Grooming"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+                <div class="video-card-info">
+                  <h4>Face and Head Grooming</h4>
+                  <p>Master the delicate art of facial grooming</p>
+                </div>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/o8UcHIUWPes"
+                  title="Body Clipping Techniques"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+                <div class="video-card-info">
+                  <h4>Body Clipping Techniques</h4>
+                  <p>Professional body clipping made simple</p>
+                </div>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/jNHs-dNbIM0"
+                  title="Leg and Paw Grooming"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+                <div class="video-card-info">
+                  <h4>Leg and Paw Grooming</h4>
+                  <p>Perfect those adorable doodle legs and paws</p>
+                </div>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/kbKyM-kXy84"
+                  title="Finishing Touches"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+                <div class="video-card-info">
+                  <h4>Finishing Touches</h4>
+                  <p>Add those professional finishing details</p>
+                </div>
+              </div>
+
+              <div class="video-card">
+                <iframe
+                  src="https://www.youtube.com/embed/JMLgmTlWyF4"
+                  title="Complete Grooming Session"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+                <div class="video-card-info">
+                  <h4>Complete Grooming Session</h4>
+                  <p>Watch a full grooming session from start to finish</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px">
+        <a href="../" class="back-button">← Back to Puppy Guide</a>
+      </div>
+    </div>
+  </body>
+</html>

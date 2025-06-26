@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puppy Potty Log - Doodle Dandy</title>
+    <meta
+      name="description"
+      content="Track your puppy's potty training progress with our detailed log. Record successes, accidents, and meal times."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Georgia", serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        animation: fadeIn 1s ease-out;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      .nav-breadcrumb {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 25px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        text-align: center;
+      }
+
+      .nav-breadcrumb a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: opacity 0.3s ease;
+      }
+
+      .nav-breadcrumb a:hover {
+        opacity: 0.8;
+      }
+
+      .content {
+        padding: 40px;
+        text-align: center;
+      }
+
+      .intro-text {
+        font-size: 1.2rem;
+        color: #495057;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      .potty-log-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        margin: 30px 0;
+        transition: transform 0.3s ease;
+      }
+
+      .potty-log-image:hover {
+        transform: scale(1.02);
+      }
+
+      .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 40px 0;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 15px 30px;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+
+      .btn-secondary {
+        background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%);
+        color: #2d3436;
+      }
+
+      .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .instructions {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        text-align: left;
+      }
+
+      .instructions h3 {
+        color: #495057;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .instructions ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .instructions li {
+        margin: 10px 0;
+        padding: 10px 0;
+        border-bottom: 1px solid #e9ecef;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .instructions li:last-child {
+        border-bottom: none;
+      }
+
+      .instruction-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: white;
+        font-weight: bold;
+        flex-shrink: 0;
+      }
+
+      .icon-1 {
+        background: #28a745;
+      }
+      .icon-2 {
+        background: #007bff;
+      }
+      .icon-3 {
+        background: #ffc107;
+        color: #333;
+      }
+      .icon-4 {
+        background: #dc3545;
+      }
+      .icon-5 {
+        background: #6f42c1;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .content {
+          padding: 20px;
+        }
+
+        .action-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .instructions {
+          padding: 20px;
+        }
+      }
+
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+
+        .container {
+          box-shadow: none;
+          border-radius: 0;
+        }
+
+        .header {
+          background: white;
+          color: #333;
+        }
+
+        .action-buttons,
+        .nav-breadcrumb {
+          display: none;
+        }
+
+        .potty-log-image {
+          max-width: 100%;
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="nav-breadcrumb">
+          <a href="../">← Back to First Week Essentials</a>
+        </div>
+        <h1>🐾 Puppy Potty Log</h1>
+        <p>Track your puppy's progress and celebrate every success!</p>
+      </div>
+
+      <div class="content">
+        <div class="intro-text">
+          <strong>Great news!</strong> Your puppy is already doing amazing with
+          potty training. Use this log to track progress, identify patterns, and
+          celebrate every milestone along the way.
+        </div>
+
+        <!-- Your actual potty log image goes here -->
+        <img
+          src="pottylog.png"
+          alt="Doodle Dandy Puppy Potty Log"
+          class="potty-log-image"
+        />
+
+        <div class="action-buttons">
+          <button onclick="window.print()" class="btn btn-primary">
+            🖨️ Print Potty Log
+          </button>
+          <a
+            href="potty-log.jpg"
+            download="doodle-dandy-potty-log.jpg"
+            class="btn btn-secondary"
+          >
+            📥 Download Image
+          </a>
+        </div>
+
+        <div class="instructions">
+          <h3>📋 How to Use Your Potty Log</h3>
+          <ul>
+            <li>
+              <div class="instruction-icon icon-1">1</div>
+              <div>
+                <strong>Print or Save:</strong> Print this log or save the image
+                to your phone for easy access throughout the day.
+              </div>
+            </li>
+            <li>
+              <div class="instruction-icon icon-2">2</div>
+              <div>
+                <strong>Record Everything:</strong> Note the date, time, whether
+                they rang bells, and if it was pee/poop.
+              </div>
+            </li>
+            <li>
+              <div class="instruction-icon icon-3">3</div>
+              <div>
+                <strong>Mark Success:</strong> Check "Good Potty" for outside
+                successes and "Accident" for indoor mistakes.
+              </div>
+            </li>
+            <li>
+              <div class="instruction-icon icon-4">4</div>
+              <div>
+                <strong>Track Meals:</strong> Use the Notes section to record
+                meal times - this helps predict potty schedules.
+              </div>
+            </li>
+            <li>
+              <div class="instruction-icon icon-5">5</div>
+              <div>
+                <strong>Look for Patterns:</strong> After a few days, you'll see
+                patterns that help you anticipate your puppy's needs.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          style="
+            background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+          "
+        >
+          <h4 style="color: #2d3436; margin-bottom: 15px; font-size: 1.3rem">
+            🎉 Remember to Celebrate!
+          </h4>
+          <p style="color: #2d3436; font-size: 1.1rem; margin: 0">
+            Every successful potty trip deserves praise and maybe a small treat.
+            Your puppy is learning, and positive reinforcement is the key to
+            continued success!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

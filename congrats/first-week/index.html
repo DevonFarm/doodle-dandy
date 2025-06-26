@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puppy Preparation Guide - Doodle Dandy</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Georgia", serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+        padding: 40px 0;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        animation: fadeInDown 1s ease-out;
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease-out 0.3s both;
+      }
+
+      .intro-section {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 30px;
+        color: white;
+        text-align: center;
+        animation: fadeIn 1s ease-out 0.4s both;
+      }
+
+      .intro-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #ffeaa7;
+      }
+
+      .nav-breadcrumb {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 25px;
+        border-radius: 25px;
+        margin-bottom: 30px;
+        text-align: center;
+        animation: fadeIn 1s ease-out 0.4s both;
+      }
+
+      .nav-breadcrumb a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: opacity 0.3s ease;
+      }
+
+      .nav-breadcrumb a:hover {
+        opacity: 0.8;
+      }
+
+      .content-section {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        overflow: hidden;
+        animation: fadeIn 1s ease-out 0.6s both;
+      }
+
+      .section-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .section-header h2 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      .section-header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .section-content {
+        padding: 40px;
+      }
+
+      .journey-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin: 30px 0;
+      }
+
+      .journey-item {
+        background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%);
+        border-radius: 15px;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .journey-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .journey-item .icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      .journey-item h3 {
+        color: #2d3436;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+      }
+
+      .journey-item p {
+        color: #2d3436;
+        font-size: 1rem;
+      }
+
+      .safety-highlight {
+        background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        border-left: 5px solid #e17055;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .safety-highlight h3 {
+        color: #2d3436;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .safety-highlight ul {
+        color: #2d3436;
+        margin-left: 20px;
+      }
+
+      .safety-highlight li {
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+      }
+
+      .food-section {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+      }
+
+      .food-section h3 {
+        color: #495057;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .food-product {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .food-info h4 {
+        color: #495057;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+
+      .food-info p {
+        color: #6c757d;
+        margin-bottom: 10px;
+      }
+
+      .food-info ul {
+        margin: 10px 0 10px 20px;
+      }
+
+      .food-info li {
+        margin-bottom: 5px;
+      }
+
+      .food-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .food-links a {
+        background: #667eea;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .food-links a:hover {
+        background: #5a67d8;
+        transform: scale(1.05);
+      }
+
+      .feeding-section {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+      }
+
+      .feeding-section h3 {
+        color: #495057;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .supplies-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+      }
+
+      .supply-item {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .supply-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .supply-header {
+        margin-bottom: 15px;
+      }
+
+      .supply-icon {
+        font-size: 2.5rem;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .supply-item h3 {
+        color: #495057;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+
+      .supply-item p {
+        color: #6c757d;
+        margin-bottom: 15px;
+      }
+
+      .supply-link {
+        background: #667eea;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin: 5px;
+      }
+
+      .supply-link:hover {
+        background: #5a67d8;
+        transform: scale(1.05);
+      }
+
+      .supply-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .treats-section {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+      }
+
+      .treats-section h3 {
+        color: #495057;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .warning-box {
+        background: #f8d7da;
+        border: 1px solid #f5c6cb;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .warning-box h4 {
+        color: #721c24;
+        margin: 0;
+      }
+
+      .treats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      .treat-item {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .treat-item h4 {
+        color: #495057;
+        margin-bottom: 15px;
+      }
+
+      .treat-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .community-callout {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        margin: 30px 0;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .community-callout h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .community-callout p {
+        font-size: 1.1rem;
+        opacity: 0.95;
+      }
+
+      .update-badge {
+        background: #28a745;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2.2rem;
+        }
+
+        .section-content {
+          padding: 25px 20px;
+        }
+
+        .journey-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .supplies-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .food-links {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🐾 Puppy Preparation Guide</h1>
+        <p>Everything you need for bringing your Doodle Dandy baby home</p>
+      </div>
+
+      <div class="intro-section">
+        <div class="update-badge">LIVING DOCUMENT</div>
+        <h2>📝 Constantly Updated for Our Families</h2>
+        <p>
+          This guide is continuously improved based on feedback from our Doodle
+          Dandy community. We add new insights and tips as families share their
+          experiences with us!
+        </p>
+      </div>
+
+      <div class="nav-breadcrumb">
+        <a href="../">← Back to Puppy Guide</a>
+      </div>
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2>🚗 The Journey Home</h2>
+          <p>Essential items and tips for a safe, comfortable trip</p>
+        </div>
+        <div class="section-content">
+          <div class="journey-grid">
+            <div class="journey-item">
+              <span class="icon">🛡️</span>
+              <h3>Travel Safety</h3>
+              <p>
+                Cozy blanket for passenger rides, crate for long journeys and
+                rest stops
+              </p>
+            </div>
+            <div class="journey-item">
+              <span class="icon">🧽</span>
+              <h3>Cleanup Essentials</h3>
+              <p>
+                Baby wipes, trash bags, and old grocery sacks for any accidents
+                or car sickness
+              </p>
+            </div>
+            <div class="journey-item">
+              <span class="icon">🎾</span>
+              <h3>Comfort Items</h3>
+              <p>
+                Favorite toys and safe chew items to keep your puppy calm and
+                entertained
+              </p>
+            </div>
+          </div>
+
+          <div class="safety-highlight">
+            <h3>⚠️ Important Safety Reminders</h3>
+            <ul>
+              <li>
+                <strong>No paws on ground</strong> until home if puppy hasn't
+                completed all 4 shots
+              </li>
+              <li>
+                <strong>Flying?</strong> Use potty pads in family bathrooms,
+                wipe paws with baby wipes
+              </li>
+              <li>
+                <strong>Vet visits:</strong> Carry your pup in, use towel on
+                exam table
+              </li>
+              <li>
+                <strong>Rest stops:</strong> Choose off-the-beaten-path
+                locations like strip malls
+              </li>
+              <li>
+                <strong>Avoid:</strong> Dog parks and pet stores until fully
+                vaccinated
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2>🍽️ Food & Nutrition</h2>
+          <p>Keeping your puppy on the right diet from day one</p>
+        </div>
+        <div class="section-content">
+          <div class="food-section">
+            <h3>🏆 Recommended: Victor Professional Dog Food</h3>
+
+            <div class="food-product">
+              <div class="food-info">
+                <h4>Victor Classic Professional Formula</h4>
+                <p>
+                  <strong>Super Premium Dog Food</strong> - Perfect for dogs of
+                  all life stages
+                </p>
+                <p>
+                  🎯 <strong>Special Doodle Dandy Pricing:</strong> We can pick
+                  up a bag for your adoption day at 15-20% below retail!
+                </p>
+
+                <div class="food-links">
+                  <a
+                    href="https://www.tractorsupply.com/tsc/product/victor-professional-dry-dog-food-40-lb-1397367"
+                    target="_blank"
+                    >Tractor Supply</a
+                  >
+                  <a
+                    href="https://www.farmandfleet.com/products/1277198-victor-40-lb-classic-professional-dry-dog-food.html"
+                    target="_blank"
+                    >Farm & Fleet</a
+                  >
+                  <a
+                    href="https://www.chewy.com/victor-classic-professional-formula/dp/188057"
+                    target="_blank"
+                    >Chewy</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="
+                background: white;
+                border-radius: 10px;
+                padding: 20px;
+                margin-top: 20px;
+                border: 2px solid #28a745;
+              "
+            >
+              <h4 style="color: #28a745; margin-bottom: 10px">
+                💰 Money-Saving Tip!
+              </h4>
+              <p>
+                Let us know if you'd like us to pick up a bag for your adoption
+                day - we get a great discount that saves you 15-20% compared to
+                most retailers!
+              </p>
+            </div>
+          </div>
+
+          <div class="feeding-section">
+            <h3>🥥 Essential Food Additions</h3>
+
+            <div class="food-product">
+              <div class="food-info">
+                <h4>Organic Coconut Flour</h4>
+                <p><strong>Daily digestive support for your puppy</strong></p>
+                <p><strong>Dosage by weight:</strong></p>
+                <ul>
+                  <li>Up to 20 lbs: 1/4 - 1/2 teaspoon per meal</li>
+                  <li>20-30 lbs: 1/2 - 3/4 teaspoon per meal</li>
+                  <li>Over 30 lbs: 1 tablespoon per meal (can be heaping)</li>
+                </ul>
+                <div class="food-links">
+                  <a href="https://www.walmart.com/ip/50068000" target="_blank"
+                    >Shop at Walmart</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="
+                background: #e8f5e8;
+                border-radius: 10px;
+                padding: 20px;
+                margin: 20px 0;
+              "
+            >
+              <h4 style="color: #2d5016; margin-bottom: 15px">
+                🍽️ Complete Meal Preparation
+              </h4>
+              <p style="color: #2d5016">
+                <strong>Mix together:</strong> Dog food + Coconut flour + Plain
+                yogurt + Pumpkin (or sweet potato) + Warm water
+              </p>
+              <p style="color: #2d5016; margin-top: 10px">
+                <strong>Weekly treats:</strong> Old-fashioned oatmeal (not
+                instant, no salt)
+              </p>
+            </div>
+
+            <div
+              style="
+                background: #fff3cd;
+                border-radius: 10px;
+                padding: 20px;
+                margin: 20px 0;
+                border-left: 4px solid #ffc107;
+              "
+            >
+              <h4 style="color: #856404; margin-bottom: 15px">
+                ⏰ CRITICAL First Meal Guidelines
+              </h4>
+              <p style="color: #856404">
+                <strong>Goal:</strong> Baby cleans up everything in 10 minutes
+                or less
+              </p>
+              <p style="color: #856404">
+                <strong>First meal:</strong> Start with just 1/4 cup kibble +
+                additions
+              </p>
+              <p style="color: #856404">
+                <strong>Location:</strong> Feed in crate/playpen only
+              </p>
+              <p style="color: #856404">
+                <strong>Time limit:</strong> 10 minutes maximum - set a timer!
+              </p>
+              <p style="color: #856404">
+                <strong>No hovering:</strong> Give food, walk away, return after
+                10 minutes
+              </p>
+              <p style="color: #856404">
+                <strong>If not finished:</strong> Remove food without fussing -
+                try again next meal
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2>🛍️ Essential Supplies</h2>
+          <p>Everything your puppy needs for comfort and safety</p>
+        </div>
+        <div class="section-content">
+          <div class="supplies-grid">
+            <div class="supply-item">
+              <div class="supply-header">
+                <span class="supply-icon">🏠</span>
+                <h3>First Crate</h3>
+              </div>
+              <p>Perfect size for your baby's first home</p>
+              <a
+                href="https://www.amazon.com/gp/product/B007R6GQL2/"
+                target="_blank"
+                class="supply-link"
+                >Amazon - Baby Crate</a
+              >
+            </div>
+
+            <div class="supply-item">
+              <div class="supply-header">
+                <span class="supply-icon">🍽️</span>
+                <h3>Stainless Steel Bowls</h3>
+              </div>
+              <p>Sanitary and easy to clean - won't absorb odors</p>
+              <a
+                href="https://a.co/d/hSZBvPg"
+                target="_blank"
+                class="supply-link"
+                >Amazon - Steel Bowls</a
+              >
+            </div>
+
+            <div class="supply-item">
+              <div class="supply-header">
+                <span class="supply-icon">✈️</span>
+                <h3>Airline Carrier</h3>
+              </div>
+              <p>TSA approved for flying families</p>
+              <a
+                href="https://www.amazon.com/MASKEYON-Approved-Expandable-Collapsible-Removable/dp/B081P14MJD/"
+                target="_blank"
+                class="supply-link"
+                >Amazon - Airline Carrier</a
+              >
+            </div>
+
+            <div class="supply-item">
+              <div class="supply-header">
+                <span class="supply-icon">📍</span>
+                <h3>Apple AirTag Safety</h3>
+              </div>
+              <p>Extra peace of mind for tracking</p>
+              <div class="supply-links">
+                <a
+                  href="https://a.co/d/c9QHig3"
+                  target="_blank"
+                  class="supply-link"
+                  >AirTag</a
+                >
+                <a
+                  href="https://a.co/d/4qDobMM"
+                  target="_blank"
+                  class="supply-link"
+                  >Collar Holder</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="treats-section">
+            <h3>🦴 Safe Chews & Treats</h3>
+            <div class="warning-box">
+              <h4>⚠️ NO RAWHIDE - Safe alternatives only!</h4>
+            </div>
+
+            <div class="treats-grid">
+              <div class="treat-item">
+                <h4>🧸 Plush Toys</h4>
+                <div class="treat-links">
+                  <a
+                    href="https://www.chewy.com/brands/plush-6985"
+                    target="_blank"
+                    class="supply-link"
+                    >Kong Plush</a
+                  >
+                  <a
+                    href="https://www.chewy.com/s?query=Godog%20toys%20plush"
+                    target="_blank"
+                    class="supply-link"
+                    >GoDog Toys</a
+                  >
+                </div>
+              </div>
+
+              <div class="treat-item">
+                <h4>🦴 Natural Chews</h4>
+                <div class="treat-links">
+                  <a
+                    href="https://www.chewy.com/best-bully-sticks-odor-free-6-bully/dp/174146"
+                    target="_blank"
+                    class="supply-link"
+                    >Bully Sticks</a
+                  >
+                  <a
+                    href="https://www.chewy.com/ecokind-gold-yak-himalayan-cheese-dog/dp/173982"
+                    target="_blank"
+                    class="supply-link"
+                    >Yak Chews</a
+                  >
+                </div>
+              </div>
+
+              <div class="treat-item">
+                <h4>🎾 Interactive Toys</h4>
+                <div class="treat-links">
+                  <a
+                    href="https://a.co/d/eYG7lLx"
+                    target="_blank"
+                    class="supply-link"
+                    >Puzzle Toys</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="community-callout">
+        <h3>👨‍👩‍👧‍👦 Join the Doodle Dandy Community</h3>
+        <p>
+          Connect with other families, share experiences, and get ongoing
+          support from our amazing community of Doodle Dandy parents!
+        </p>
+        <a
+          href="https://www.facebook.com/groups/doodledandygroup/"
+          target="_blank"
+          style="
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+          "
+          >🔗 Join Our Facebook Group</a
+        >
+      </div>
+
+      <div style="text-align: center; margin-top: 40px">
+        <a
+          href="../"
+          style="
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+          "
+          >← Back to Puppy Guide</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

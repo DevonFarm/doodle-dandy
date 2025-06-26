@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health & Safety - Doodle Dandy</title>
+    <meta
+      name="description"
+      content="Essential health and safety information for your new Doodle Dandy puppy. Vaccination, insurance, spay/neuter guidance and emergency preparation."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Georgia", serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header-logo {
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 30px auto;
+        display: block;
+        animation: fadeIn 1s ease-out 0.2s both;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+      }
+
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+        padding: 40px 0;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        animation: fadeInDown 1s ease-out;
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease-out 0.3s both;
+      }
+
+      .nav-breadcrumb {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 25px;
+        border-radius: 25px;
+        margin-bottom: 30px;
+        text-align: center;
+        animation: fadeIn 1s ease-out 0.4s both;
+      }
+
+      .nav-breadcrumb a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: opacity 0.3s ease;
+      }
+
+      .nav-breadcrumb a:hover {
+        opacity: 0.8;
+      }
+
+      .content-section {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        overflow: hidden;
+        animation: fadeIn 1s ease-out 0.6s both;
+      }
+
+      .section-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .section-header h2 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      .section-header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .section-content {
+        padding: 40px;
+      }
+
+      .vaccine-highlight {
+        background: linear-gradient(135deg, #ff7675 0%, #fd79a8 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        border-left: 5px solid #e84393;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        color: white;
+      }
+
+      .vaccine-highlight h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .vaccine-highlight p {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        opacity: 0.95;
+      }
+
+      .vaccine-highlight ul {
+        margin-left: 20px;
+        margin-bottom: 15px;
+      }
+
+      .vaccine-highlight li {
+        margin-bottom: 8px;
+        font-size: 1.05rem;
+      }
+
+      .insurance-warning {
+        background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        border-left: 5px solid #d63031;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .insurance-warning h3 {
+        color: #2d3436;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .insurance-warning p {
+        color: #2d3436;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+      }
+
+      .insurance-examples {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+      }
+
+      .insurance-examples h4 {
+        color: #2d3436;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+      }
+
+      .insurance-examples ul {
+        margin-left: 20px;
+      }
+
+      .insurance-examples li {
+        margin-bottom: 10px;
+        color: #2d3436;
+      }
+
+      .savings-recommendation {
+        background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        color: white;
+      }
+
+      .savings-recommendation h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .savings-recommendation p {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        opacity: 0.95;
+      }
+
+      .spay-neuter-info {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+      }
+
+      .spay-neuter-info h3 {
+        color: #495057;
+        margin-bottom: 20px;
+        font-size: 1.6rem;
+        text-align: center;
+      }
+
+      .spay-neuter-info ul {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .spay-neuter-info li {
+        margin-bottom: 10px;
+        font-size: 1.05rem;
+        color: #495057;
+      }
+
+      .poison-control-offer {
+        background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        color: white;
+      }
+
+      .poison-control-offer h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .poison-control-offer p {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        opacity: 0.95;
+      }
+
+      .price-highlight {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .safety-tips {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .safety-tip {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        border-top: 4px solid #667eea;
+      }
+
+      .safety-tip:hover {
+        transform: translateY(-5px);
+      }
+
+      .safety-tip .tip-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      .safety-tip h4 {
+        color: #495057;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+      }
+
+      .safety-tip p {
+        color: #6c757d;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .vet-link {
+        background: #e3f2fd;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      .vet-link a {
+        color: #1565c0;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      .vet-link a:hover {
+        text-decoration: underline;
+      }
+
+      .back-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 30px;
+      }
+
+      .back-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2.2rem;
+        }
+
+        .section-content {
+          padding: 25px 20px;
+        }
+
+        .vaccine-highlight,
+        .insurance-warning,
+        .savings-recommendation,
+        .spay-neuter-info,
+        .poison-control-offer {
+          padding: 20px;
+        }
+
+        .safety-tips {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://doodledandy.dog/assets/images/header.png"
+          alt="Doodle Dandy"
+          class="header-logo"
+        />
+        <h1>🏥 Health & Safety</h1>
+        <p>Essential health information to keep your baby safe and healthy</p>
+      </div>
+
+      <div class="nav-breadcrumb">
+        <a href="../">← Back to Puppy Guide</a>
+      </div>
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2>💉 Vaccination & Safety Precautions</h2>
+          <p>Important guidelines for puppies not yet fully vaccinated</p>
+        </div>
+        <div class="section-content">
+          <div class="vaccine-highlight">
+            <h3>
+              🚨 Remember: If Your Baby Hasn't Completed All 4 Puppy Shots
+            </h3>
+            <p>
+              <strong
+                >No paws on the ground until you get home to your own
+                space!</strong
+              >
+              Your puppy's immune system is still developing, and public areas
+              can harbor dangerous diseases.
+            </p>
+          </div>
+
+          <div class="safety-tips">
+            <div class="safety-tip">
+              <span class="tip-icon">✈️</span>
+              <h4>Flying Tips</h4>
+              <p>
+                Use potty pads in family bathrooms. Set pad and pup down, use
+                commands "go potty" and "good potty". If they step off the pad,
+                wipe paws with baby wipes.
+              </p>
+            </div>
+            <div class="safety-tip">
+              <span class="tip-icon">🏥</span>
+              <h4>Vet Visits</h4>
+              <p>
+                Always carry your pup into the vet clinic and bring a clean
+                towel to place on the exam table for extra protection.
+              </p>
+            </div>
+            <div class="safety-tip">
+              <span class="tip-icon">🛑</span>
+              <h4>Travel Stops</h4>
+              <p>
+                If you must stop en route home, choose off-the-beaten-path
+                locations like strip malls that don't have pet stores.
+              </p>
+            </div>
+            <div class="safety-tip">
+              <span class="tip-icon">🚫</span>
+              <h4>Avoid These Places</h4>
+              <p>
+                <strong>NO dog parks and NO pet stores</strong> until your puppy
+                has completed their full vaccination series.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2>🛡️ Pet Insurance: The Truth</h2>
+          <p>What you need to know before making this important decision</p>
+        </div>
+        <div class="section-content">
+          <div class="insurance-warning">
+            <h3>⚠️ The Reality of Pet Insurance</h3>
+            <p>
+              Many insurance companies operate on a similar model: they offer an
+              attractive price in the first year, as the likelihood of needing
+              significant coverage is low. However, in subsequent years, the
+              premiums increase, sometimes reaching as high as
+              <strong>$3,000 annually</strong>.
+            </p>
+            <p>
+              This would be concerning enough on its own, but when a claim is
+              made, companies often exploit loopholes and deny coverage for
+              various reasons.
+            </p>
+
+            <div class="insurance-examples">
+              <h4>📊 Recent Real Examples:</h4>
+              <ul>
+                <li>
+                  <strong>Family #1:</strong> Faced a $9,000 bill before their
+                  beloved pet passed away. Despite paying into insurance for
+                  <em>eight years</em>, they received only $850 in
+                  reimbursement.
+                </li>
+                <li>
+                  <strong>Family #2:</strong> Was paying $3,000 per year in
+                  premiums. When hit with a $10,000 vet bill, their insurance
+                  only covered $1,000.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="savings-recommendation">
+            <h3>💰 Our Better Solution</h3>
+            <p>
+              <strong>Open a dedicated pet savings account</strong> that remains
+              untouched for anything else. Deposit $100 a month per dog in your
+              household.
+            </p>
+            <p>
+              This way, when an emergency occurs (which typically isn't in the
+              early years), you'll have a substantial cushion to protect your
+              pet - and you keep control of YOUR money!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2>✂️ Spay/Neuter Timing</h2>
+          <p>The right time makes all the difference for your dog's health</p>
+        </div>
+        <div class="section-content">
+          <div class="spay-neuter-info">
+            <h3>📅 Optimal Timing Guidelines</h3>
+            <ul>
+              <li><strong>Ideal time:</strong> Close to 1 year of age</li>
+              <li><strong>Minimum age:</strong> No younger than 6 months</li>
+              <li>
+                <strong>Small breed dogs (less than 50 pounds):</strong> We
+                recommend waiting until at least 6 months
+              </li>
+              <li>
+                <strong>Large breed dogs (greater than 50 pounds):</strong> Wait
+                until after skeletal maturity but before the second heat cycle
+                (usually 12-15 months) for females, or any time after skeletal
+                maturity for males
+              </li>
+            </ul>
+
+            <div class="vet-link">
+              <p>
+                For detailed information about the importance of proper timing:
+              </p>
+              <a
+                href="https://www.aaha.org/aaha-guidelines/life-stage-canine-2019/spay-and-neuter-timing/"
+                target="_blank"
+              >
+                → AAHA Spay and Neuter Timing Guidelines
+              </a>
+              <p style="margin-top: 10px; font-size: 0.95rem; color: #6c757d">
+                Want more information? Feel free to text us!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2>☠️ Poison Control Protection</h2>
+          <p>Peace of mind for emergencies you hope never happen</p>
+        </div>
+        <div class="section-content">
+          <div class="poison-control-offer">
+            <h3>🆘 Lifetime Poison Control Access</h3>
+            <p>
+              When bringing home a new baby, the last thing on your mind should
+              be poison control. However, we understand the importance of being
+              prepared for any situation.
+            </p>
+            <p>
+              <strong>Important to know:</strong> While humans can receive free
+              assistance from poison control centers, pets are not covered under
+              this policy. Even emergency vets will require you to create a case
+              with poison control to gather vital information.
+            </p>
+
+            <div class="price-highlight">
+              💝 <strong>Lifetime Access:</strong> Only $25 added to microchip
+              registration<br />
+              <span style="font-size: 0.9rem; opacity: 0.8"
+                >(Saves you from $85 per call fees)</span
+              >
+            </div>
+
+            <p>
+              We sincerely hope you never have to use this service, but if you'd
+              like peace of mind knowing that lifetime poison control is
+              available for your puppy, please let us know so we can add it to
+              their microchip registration.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px">
+        <a href="../" class="back-button">← Back to Puppy Guide</a>
+      </div>
+    </div>
+  </body>
+</html>
