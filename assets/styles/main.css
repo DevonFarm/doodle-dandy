@@ -7,6 +7,27 @@ body {
   padding-bottom: 3rem;
 }
 
+h1 {
+    font-size: 1.5rem;     /* Main heading - slightly larger */
+    font-weight: bolder;     /* Keep it emphasized */
+    margin-bottom: 10px;   /* Space below */
+    margin-top: 20px;      /* Space above */
+}
+
+h2 {
+    font-size: 1.3rem;     /* Slightly smaller than H1 */
+    font-weight: normal;      /* A bit less bold than H1 */
+    margin-bottom: 8px;    /* Slightly less space below */
+    margin-top: 15px;      /* Space above */
+              /* Slightly lighter color (optional) */
+}
+h3 {
+    font-size: 1.3rem;     /* Slightly smaller than H1 */
+    font-weight: normal;      /* A bit less bold than H1 */
+    margin-bottom: 8px;    /* Slightly less space below */
+    margin-top: 15px;      /* Space above */
+              /* Slightly lighter color (optional) */
+}
 ul {
   list-style: none;
   padding-left: 10px;
