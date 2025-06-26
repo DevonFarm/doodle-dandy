@@ -26,7 +26,7 @@ jobs:
           cp index.html output/
 
           # Copy directories that exist
-          for dir in sitemap.xml about appointment assets aussiedoodle available bernedoodle contact contract reviews congrats puppy-guide news; do
+          for dir in sitemap.xml about appointment assets aussiedoodle available bernedoodle contact contract reviews congrats puppy-guide news blog; do
             if [ -e "$dir" ]; then
               cp -R "$dir" output/
             else

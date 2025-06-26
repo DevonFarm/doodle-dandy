@@ -1,10 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Appointment | Doodle Dandy</title>
+    <title>Schedule Your Puppy Pickup Appointment | Doodle Dandy</title>
+    <meta
+      name="description"
+      content="Schedule your Doodle Dandy puppy pickup appointment. Easy online booking with confirmation via text. Professional Aussiedoodle & Bernedoodle breeder."
+    />
+    <meta
+      name="keywords"
+      content="puppy pickup appointment, doodle dandy, aussiedoodle, bernedoodle, puppy breeder, Midwest, Missouri"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://doodledandy.dog/appointment/" />
+    <meta
+      property="og:title"
+      content="Schedule Your Puppy Pickup Appointment | Doodle Dandy"
+    />
+    <meta
+      property="og:description"
+      content="Schedule your Doodle Dandy puppy pickup appointment. Easy online booking with text confirmation. Professional Aussiedoodle & Bernedoodle breeder."
+    />
+    <meta
+      property="og:image"
+      content="https://doodledandy.dog/assets/images/header.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://doodledandy.dog/appointment/"
+    />
+    <meta
+      property="twitter:title"
+      content="Schedule Your Puppy Pickup Appointment | Doodle Dandy"
+    />
+    <meta
+      property="twitter:description"
+      content="Schedule your Doodle Dandy puppy pickup appointment. Easy online booking with text confirmation. Professional Aussiedoodle & Bernedoodle breeder."
+    />
+    <meta
+      property="twitter:image"
+      content="https://doodledandy.dog/assets/images/header.png"
+    />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XNTSJK2XH8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XNTSJK2XH8");
+    </script>
+
     <link rel="stylesheet" href="../assets/vendor/simplecss/simple.min.css" />
     <link
       rel="stylesheet"
@@ -24,32 +83,432 @@
       href="../assets/images/favicon.ico"
       type="image/x-icon"
     />
+
+    <style>
+      body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        margin: 0;
+        font-family: "Georgia", serif;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header-logo {
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 30px auto;
+        display: block;
+        animation: fadeIn 1s ease-out 0.2s both;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+      }
+
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+        padding: 40px 0;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        animation: fadeInDown 1s ease-out;
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease-out 0.3s both;
+      }
+
+      /* Navigation Menu */
+      .nav-menu {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-out 0.4s both;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .nav-menu a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .nav-menu a:hover {
+        background: #667eea;
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      .content-section {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        overflow: hidden;
+        animation: fadeIn 1s ease-out 0.6s both;
+      }
+
+      .section-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .section-header h2 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      .section-header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .section-content {
+        padding: 40px;
+      }
+
+      .appointment-highlight {
+        background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .appointment-highlight h3 {
+        color: #2d3436;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .appointment-highlight p {
+        color: #2d3436;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+      }
+
+      .contact-info {
+        background: #ffeaa7;
+        border-radius: 15px;
+        padding: 25px;
+        margin: 30px 0;
+        border-left: 5px solid #fdcb6e;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-info h3 {
+        color: #2d3436;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+      }
+
+      .contact-info p {
+        color: #2d3436;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+
+      .contact-info strong {
+        color: #e17055;
+      }
+
+      .appointment-button {
+        background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+        color: white;
+        padding: 20px 40px;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        margin: 20px 0;
+        box-shadow: 0 10px 20px rgba(0, 184, 148, 0.3);
+      }
+
+      .appointment-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 184, 148, 0.4);
+      }
+
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+      }
+
+      .step-item {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .step-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .step-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        display: block;
+        color: #667eea;
+      }
+
+      .step-item h4 {
+        color: #495057;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+      }
+
+      .step-item p {
+        color: #6c757d;
+        font-size: 1rem;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2.2rem;
+        }
+
+        .nav-menu {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .section-content {
+          padding: 25px 20px;
+        }
+
+        .appointment-highlight,
+        .contact-info {
+          padding: 20px;
+        }
+
+        .steps-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <header>
-      <img src="../assets/images/header.png" alt="Doodle Dandy" />
-    </header>
-    <main>
-      <h1>Appointment</h1>
-      <p>
-        To schedule an appointment to pick up your new pet, click the link
-        below!
-      </p>
-      <p>
-        <strong
-          >Please be sure to text us at 417-420-9882 after making an appointment
-          so we can confirm your scheduled date and time.</strong
-        >
-      </p>
-      <ul>
-        <li>
-          <i class="fa-solid fa-calendar-day fa-pad-right"></i>
-          <a href="https://app.simplymeet.me/doodledandy"
-            >Schedule appointment</a
+    <div class="container">
+      <div class="header">
+        <img
+          src="../assets/images/header.png"
+          alt="Doodle Dandy"
+          class="header-logo"
+        />
+        <h1>📅 Schedule Your Appointment</h1>
+        <p>Book your puppy pickup appointment with ease</p>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="/">Home</a>
+        <a href="/bernedoodle">Bernedoodles</a>
+        <a href="/aussiedoodle">Aussiedoodles</a>
+        <a href="/about">About us</a>
+        <a href="/news">News</a>
+        <a href="/available">Available Puppies</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/contact">Contact us</a>
+      </nav>
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2>🐕 Puppy Pickup Appointment</h2>
+          <p>The exciting moment you've been waiting for!</p>
+        </div>
+        <div class="section-content">
+          <div class="appointment-highlight">
+            <h3>🎉 Ready to Meet Your New Baby?</h3>
+            <p>
+              Scheduling your puppy pickup appointment is easy! Simply click the
+              button below to choose your preferred date and time.
+            </p>
+
+            <a
+              href="https://app.simplymeet.me/doodledandy"
+              class="appointment-button"
+              target="_blank"
+            >
+              <i class="fa-solid fa-calendar-plus"></i>
+              Schedule Your Appointment
+            </a>
+          </div>
+
+          <div class="contact-info">
+            <h3>📱 Important: Text Confirmation Required</h3>
+            <p>
+              <strong
+                >Please be sure to text us at 417-420-9882 after making your
+                appointment</strong
+              >
+              so we can confirm your scheduled date and time.
+            </p>
+            <p>
+              This helps us ensure everything is perfectly prepared for your
+              puppy's big day!
+            </p>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-item">
+              <span class="step-icon">1️⃣</span>
+              <h4>Book Online</h4>
+              <p>
+                Click the appointment button above to access our online booking
+                system
+              </p>
+            </div>
+            <div class="step-item">
+              <span class="step-icon">2️⃣</span>
+              <h4>Choose Your Time</h4>
+              <p>Select a date and time that works best for your schedule</p>
+            </div>
+            <div class="step-item">
+              <span class="step-icon">3️⃣</span>
+              <h4>Text Confirmation</h4>
+              <p>Send us a text at 417-420-9882 to confirm your appointment</p>
+            </div>
+            <div class="step-item">
+              <span class="step-icon">4️⃣</span>
+              <h4>Pickup Day!</h4>
+              <p>
+                Arrive at your scheduled time to meet your new furry family
+                member
+              </p>
+            </div>
+          </div>
+
+          <div
+            style="
+              background: #e3f2fd;
+              border-radius: 15px;
+              padding: 25px;
+              margin: 30px 0;
+              text-align: center;
+            "
           >
-        </li>
-      </ul>
-    </main>
+            <h4 style="color: #1565c0; margin-bottom: 15px">
+              💡 Helpful Tips for Pickup Day
+            </h4>
+            <ul
+              style="
+                color: #1565c0;
+                text-align: left;
+                max-width: 600px;
+                margin: 0 auto;
+              "
+            >
+              <li>
+                <i class="fa-solid fa-paw"></i> Bring a secure carrier or crate
+                for a safe space if you are over nighting or need to leave baby
+                unattended
+              </li>
+              <li>
+                <i class="fa-solid fa-paw"></i> Your baby will travel best with
+                you on a blanket with their Snuggle Puppy / chews /toys!
+              </li>
+              <li>
+                <i class="fa-solid fa-paw"></i> Baby wipes, trash bags, and old
+                grocery sacks for any accidents or car sickness
+              </li>
+              <li>
+                <i class="fa-solid fa-paw"></i> Bring any questions you have
+                about your puppy's care
+              </li>
+              <li>
+                <i class="fa-solid fa-paw"></i> Be prepared for lots of puppy
+                snuggles and photos!
+              </li>
+            </ul>
+          </div>
+
+          <div
+            style="
+              background: #f1c40f;
+              color: #2c3e50;
+              border-radius: 15px;
+              padding: 25px;
+              margin: 30px 0;
+              text-align: center;
+            "
+          >
+            <h4 style="margin-bottom: 15px">
+              🔔 Questions About Your Appointment?
+            </h4>
+            <p style="margin-bottom: 10px">
+              <strong>Call or Text:</strong> 417-420-9882
+            </p>
+            <p style="margin: 0">
+              We're here to help make your puppy pickup experience as smooth and
+              exciting as possible!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

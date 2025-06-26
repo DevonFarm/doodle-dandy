@@ -8,6 +8,19 @@
       name="description"
       content="Complete grooming guide for your Doodle Dandy puppy. Professional tools, techniques, and step-by-step videos for maintaining your doodle's beautiful coat."
     />
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XNTSJK2XH8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XNTSJK2XH8");
+    </script>
     <style>
       * {
         margin: 0;
@@ -107,6 +120,7 @@
 
       .section-content {
         padding: 40px;
+        color: #2c3e50;
       }
 
       .grooming-highlight {
@@ -156,20 +170,27 @@
       }
 
       .product-card h4 {
-        color: #495057;
+        color: #2c3e50;
         margin-bottom: 15px;
         font-size: 1.3rem;
+        font-weight: bold;
       }
 
       .product-card p {
         margin-bottom: 10px;
-        color: #6c757d;
+        color: #2c3e50;
+        font-weight: 500;
       }
 
       .product-card .product-description {
         font-style: italic;
-        color: #495057;
+        color: #2c3e50;
         margin-bottom: 15px;
+      }
+
+      .product-card .product-description p {
+        color: #34495e;
+        font-weight: 500;
       }
 
       .product-card a {
@@ -183,6 +204,8 @@
         border-radius: 25px;
         transition: all 0.3s ease;
         margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 5px;
       }
 
       .product-card a:hover {
@@ -199,17 +222,18 @@
       }
 
       .special-care-section h3 {
-        color: #2d3436;
+        color: #1a3d1f;
         font-size: 1.8rem;
         margin-bottom: 15px;
         text-align: center;
       }
 
       .special-care-section p {
-        color: #2d3436;
+        color: #2c5530;
         font-size: 1.1rem;
         margin-bottom: 15px;
         text-align: center;
+        font-weight: 500;
       }
 
       .tear-stain-options {
@@ -225,6 +249,36 @@
         border-radius: 10px;
         text-align: center;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .tear-option h4 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      .tear-option p {
+        color: #2c3e50;
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+
+      .tear-option a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 10px 18px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+      }
+
+      .tear-option a:hover {
+        transform: scale(1.05);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
       }
 
       .video-section {
@@ -291,13 +345,15 @@
       }
 
       .video-card-info h4 {
-        color: #495057;
+        color: #2c3e50;
         margin-bottom: 10px;
+        font-weight: bold;
       }
 
       .video-card-info p {
-        color: #6c757d;
+        color: #34495e;
         font-size: 0.9rem;
+        font-weight: 500;
       }
 
       .back-button {
@@ -315,6 +371,46 @@
       }
 
       .back-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Add Blog Navigation */
+      .blog-navigation {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        margin: 30px 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .blog-navigation h3 {
+        color: white;
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+      }
+
+      .blog-navigation p {
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+      }
+
+      .blog-navigation a {
+        background: white;
+        color: #667eea;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        display: inline-block;
+        margin: 5px 10px;
+        transition: all 0.3s ease;
+      }
+
+      .blog-navigation a:hover {
         transform: scale(1.05);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       }
@@ -395,6 +491,16 @@
 
       <div class="nav-breadcrumb">
         <a href="../">← Back to Puppy Guide</a>
+      </div>
+
+      <!-- Add Blog Navigation -->
+      <div class="blog-navigation">
+        <h3>🐾 Looking for More Doodle Care Tips?</h3>
+        <p>
+          Explore our complete collection of expert advice and training guides
+        </p>
+        <a href="/blog/">← Back to Doodle Care Blog</a>
+        <a href="/blog/trainingcommands/">Training Commands Guide</a>
       </div>
 
       <div class="content-section">
