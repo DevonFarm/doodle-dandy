@@ -21,20 +21,18 @@ jobs:
         uses: actions/configure-pages@v5
       - name: copy static files to output dir
         run: |
-          mkdir -p output && cp -R index.html \
-            sitemap.xml \
-            about \
-            appointment \
-            assets \
-            aussiedoodle \
-            available \
-            bernedoodle \
-            contact \
-            contract \
-            reviews \
-            congrats \
-            puppy-guide \
-            output/
+          mkdir -p output
+          # Copy files that always exist
+          cp index.html output/
+
+          # Copy directories that exist
+          for dir in sitemap.xml about appointment assets aussiedoodle available bernedoodle contact contract reviews congrats puppy-guide; do
+            if [ -e "$dir" ]; then
+              cp -R "$dir" output/
+            else
+              echo "Warning: $dir does not exist, skipping..."
+            fi
+          done
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
         with:
