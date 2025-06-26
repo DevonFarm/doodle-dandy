@@ -49,6 +49,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+  <loc>https://doodledandy.dog/news/</loc>
+  <lastmod>2025-06-26</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+  <url>
     <loc>https://doodledandy.dog/reviews/</loc>
     <lastmod>2025-06-25</lastmod>
     <changefreq>monthly</changefreq>
