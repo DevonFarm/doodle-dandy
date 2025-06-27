@@ -1,21 +1,28 @@
 https://doodledandy.dog/index.html
-https://doodledandy.dog/about/
-https://doodledandy.dog/aussiedoodle/
-https://doodledandy.dog/available/
 https://doodledandy.dog/bernedoodle/
+https://doodledandy.dog/aussiedoodle/
+https://doodledandy.dog/about/
+https://doodledandy.dog/news/
+https://doodledandy.dog/available/
+https://doodledandy.dog/reviews/
+https://doodledandy.dog/blog/
+https://doodledandy.dog/contact/
+
+
 https://doodledandy.dog/congrats/
+
+https://doodledandy.dog/congrats/resources/
+
 https://doodledandy.dog/congrats/first-week/
 https://doodledandy.dog/congrats/potty-log/
 https://doodledandy.dog/congrats/preparation/
-https://doodledandy.dog/congrats/resources/
-https://doodledandy.dog/congrats/training/
-https://doodledandy.dog/contact/
-https://doodledandy.dog/reviews/
-https://doodledandy.dog/blog/
-https://doodledandy.dog/blog/health-prevent/
-https://doodledandy.dog/blog/mental-stimulation/
-https://doodledandy.dog/blog/puppy-social/
-https://doodledandy.dog/blog/trainingcommands/
 
+https://doodledandy.dog/congrats/training/
+
+
+https://doodledandy.dog/blog/trainingcommands/
+https://doodledandy.dog/blog/health-prevent/
+https://doodledandy.dog/blog/puppy-social/
+https://doodledandy.dog/blog/mental-stimulation/
 
 
