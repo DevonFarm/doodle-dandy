@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Congratulations on Your New Puppy! - Doodle Dandy</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/images/favicon.ico"
+    />
     <meta
       name="description"
       content="Congratulations on your new Doodle Dandy puppy! Learn essential care tips for a smooth transition and happy life with your Bernedoodle or Aussiedoodle baby"
@@ -202,11 +207,70 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       }
 
+      /* Updated Footer Styles */
       .footer {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        margin-top: 60px;
+        padding: 40px 30px;
         text-align: center;
         color: white;
-        margin-top: 50px;
-        padding: 30px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .footer-message {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 25px;
+        opacity: 0.95;
+        font-style: italic;
+      }
+
+      .footer-signature {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
+
+      .footer-link {
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        padding: 8px 16px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+      }
+
+      .footer-link:hover {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .footer-copyright {
+        margin-top: 25px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 0.9rem;
         opacity: 0.8;
       }
 
@@ -278,6 +342,21 @@
         .navigation-grid {
           grid-template-columns: 1fr;
           gap: 20px;
+        }
+
+        .footer {
+          padding: 30px 20px;
+          margin-top: 40px;
+        }
+
+        .footer-links {
+          gap: 15px;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .footer-message {
+          font-size: 1rem;
         }
       }
     </style>
@@ -372,14 +451,34 @@
         </a>
       </div>
 
-      <div class="footer">
-        <p>
-          Remember: Every puppy is unique, and this journey is yours to enjoy
-          together. Take it one day at a time, be patient with both yourself and
-          your new baby, and most importantly – have fun!
-        </p>
-        <p><strong>- The Doodle Dandy Family</strong></p>
-      </div>
+      <footer class="footer">
+        <div class="footer-content">
+          <p class="footer-message">
+            Remember: Every puppy is unique, and this journey is yours to enjoy
+            together. Take it one day at a time, be patient with both yourself
+            and your new baby, and most importantly – have fun!
+          </p>
+
+          <p class="footer-signature">- The Doodle Dandy Family</p>
+
+          <div class="footer-links">
+            <a href="../" class="footer-link">Home</a>
+            <a href="../about/" class="footer-link">About Us</a>
+            <a href="../available-puppies/" class="footer-link"
+              >Available Puppies</a
+            >
+            <a href="../contact/" class="footer-link">Contact</a>
+            <a href="../resources/" class="footer-link">Resources</a>
+          </div>
+
+          <div class="footer-copyright">
+            <p>
+              &copy; 2025 Doodle Dandy. All rights reserved. | Made with ❤️ for
+              our puppy families
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
