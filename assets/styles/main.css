@@ -28,6 +28,18 @@ h3 {
     margin-top: 15px;      /* Space above */
               /* Slightly lighter color (optional) */
 }
+footer {
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
+  color: #6c757d;
+  border-top: 1px solid #e9ecef;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
 ul {
   list-style: none;
   padding-left: 10px;
