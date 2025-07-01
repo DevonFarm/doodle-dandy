@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Beautiful Puppies - Doodle Dandy</title>
+    <meta
+      name="description"
+      content="Meet our adorable Doodle Dandy puppies! View our latest litter of beautiful, healthy doodle puppies ready for their forever homes."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Georgia", serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header-logo {
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 30px auto;
+        display: block;
+        animation: fadeIn 1s ease-out 0.2s both;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+      }
+
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+        padding: 40px 0;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        animation: fadeInDown 1s ease-out;
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease-out 0.3s both;
+      }
+
+      .nav-breadcrumb {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 25px;
+        border-radius: 25px;
+        margin-bottom: 30px;
+        text-align: center;
+        animation: fadeIn 1s ease-out 0.4s both;
+      }
+
+      .nav-breadcrumb a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: opacity 0.3s ease;
+      }
+
+      .nav-breadcrumb a:hover {
+        opacity: 0.8;
+      }
+
+      .content-section {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        overflow: hidden;
+        animation: fadeIn 1s ease-out 0.6s both;
+      }
+
+      .section-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .section-header h2 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      .section-header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .section-content {
+        padding: 40px;
+      }
+
+      .puppy-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin: 30px 0;
+      }
+
+      .puppy-card {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        background: white;
+        position: relative;
+      }
+
+      .puppy-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .puppy-image {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .puppy-card:hover .puppy-image {
+        transform: scale(1.05);
+      }
+
+      .puppy-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          45deg,
+          rgba(102, 126, 234, 0.8),
+          rgba(118, 75, 162, 0.8)
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .puppy-card:hover .puppy-overlay {
+        opacity: 1;
+      }
+
+      .highlight-section {
+        background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .highlight-section h3 {
+        color: #2d3436;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .highlight-section p {
+        color: #2d3436;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+      }
+
+      .contact-section {
+        background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-section h3 {
+        color: #2d3436;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .contact-section p {
+        color: #2d3436;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+      }
+
+      .back-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 30px;
+      }
+
+      .back-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .footer {
+        text-align: center;
+        color: white;
+        margin-top: 40px;
+        padding: 20px 0;
+        opacity: 0.8;
+      }
+
+      .footer p {
+        margin-bottom: 10px;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2.2rem;
+        }
+
+        .section-content {
+          padding: 25px 20px;
+        }
+
+        .highlight-section,
+        .contact-section {
+          padding: 20px;
+        }
+
+        .puppy-gallery {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .puppy-card {
+          margin: 0 auto;
+          max-width: 400px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 10px;
+        }
+
+        .header {
+          padding: 20px 0;
+        }
+
+        .section-content {
+          padding: 20px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://doodledandy.dog/assets/images/header.png"
+          alt="Doodle Dandy"
+          class="header-logo"
+        />
+        <h1>🐾 Our Beautiful Puppies</h1>
+        <p>Meet our adorable doodle babies looking for their forever homes</p>
+      </div>
+
+      <div class="nav-breadcrumb">
+        <a href="../">← Back to Main Site</a>
+      </div>
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2>🌟 Available Puppies</h2>
+          <p>Healthy, happy, and ready to bring joy to your family</p>
+        </div>
+        <div class="section-content">
+          <div class="highlight-section">
+            <h3>💝 Why Choose Doodle Dandy?</h3>
+            <p>
+              Our puppies are raised with love, care, and professional attention
+              to health and temperament. Each baby comes with a comprehensive
+              health guarantee and lifetime support.
+            </p>
+            <p>
+              <strong
+                >All puppies are vet-checked, up-to-date on vaccines, and ready
+                for their new families!</strong
+              >
+            </p>
+          </div>
+
+          <div class="puppy-gallery">
+            <div class="puppy-card">
+              <img
+                src="https://i.ibb.co/v4zpM4LL/6257-FEBE-61-ED-4-CCD-B10-D-C30-B6-AAD6-CC5-1-105-c.jpg"
+                alt="Adorable Doodle Puppy"
+                class="puppy-image"
+              />
+              <div class="puppy-overlay">
+                <span>🐕 Rotten & Gentle</span>
+              </div>
+            </div>
+
+            <div class="puppy-card">
+              <img
+                src="https://i.ibb.co/gbq9cmR9/0-F08-F237-D4-D7-4-E32-9045-6-FF71-B217-BFC-1-105-c.jpg"
+                alt="Playful Doodle Puppy"
+                class="puppy-image"
+              />
+              <div class="puppy-overlay">
+                <span>🎾 Playful & Energetic</span>
+              </div>
+            </div>
+
+            <div class="puppy-card">
+              <img
+                src="https://i.ibb.co/qYtVJC3k/2-D6-DEE5-B-F408-4060-9-DF8-E9-E1676-F4-E18-1-105-c.jpg"
+                alt="Cuddly Doodle Puppy"
+                class="puppy-image"
+              />
+              <div class="puppy-overlay">
+                <span>🤗 Cuddly & Calm</span>
+              </div>
+            </div>
+
+            <div class="puppy-card">
+              <img
+                src="https://i.ibb.co/tTr2kb1R/FCD7-AC51-CE0-C-4726-95-D6-27-EBDD599489-1-105-c.jpg"
+                alt="Beautiful Doodle Puppy"
+                class="puppy-image"
+              />
+              <div class="puppy-overlay">
+                <span>✨ Beautiful & Bright</span>
+              </div>
+            </div>
+
+            <div class="puppy-card">
+              <img
+                src="https://i.ibb.co/hJTwSmNP/8-A89-FA1-D-EB03-424-E-9-B43-E5-FD3-B954683-1-105-c.jpg"
+                alt="Smart Doodle Puppy"
+                class="puppy-image"
+              />
+              <div class="puppy-overlay">
+                <span>🧠 Smart & Alert</span>
+              </div>
+            </div>
+
+            <div class="puppy-card">
+              <img
+              src=https://i.ibb.co/FqXKwNHT/860190-D0-F119-4064-B64-E-05895110535-E-1-105-c.jpg"
+              alt="Loving Doodle Puppy" class="puppy-image" />
+              <div class="puppy-overlay">
+                <span>💕 Loving & Loyal</span>
+              </div>
+            </div>
+
+            <div class="puppy-card">
+              <img
+                src="https://i.ibb.co/Psj1QyJL/95-D824-EE-9-AC5-4-CB5-AAB8-137-D57-C4-DB3-A-1-105-c.jpg"
+                alt="Happy Doodle Puppy"
+                class="puppy-image"
+              />
+              <div class="puppy-overlay">
+                <span>😊 Happy & Healthy</span>
+              </div>
+            </div>
+
+            <div class="puppy-card">
+              <img
+                src="https://i.ibb.co/9k6kK8h9/DF89-B823-40-A6-411-D-B8-E5-A0992-ACE1207-1-105-c.jpg"
+                alt="Adorable Doodle Puppy"
+                class="puppy-image"
+              />
+              <div class="puppy-overlay">
+                <span>🌟 Absolutely Adorable</span>
+              </div>
+            </div>
+
+            <div class="puppy-card">
+              <img
+                src="https://i.ibb.co/mrwdLv1f/ED748-B54-DE2-E-4078-B639-BB59-DA5-E926-A-1-105-c.jpg"
+                alt="Perfect Doodle Puppy"
+                class="puppy-image"
+              />
+              <div class="puppy-overlay">
+                <span>🎯 Perfect Companion</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-section">
+            <h3>🏠 Ready to Take One Home?</h3>
+            <p>
+              These beautiful babies are looking for their forever families!
+              Each puppy comes with health records, starter food, and our
+              comprehensive puppy guide.
+            </p>
+            <p>
+              <strong
+                >Contact us today to learn more about availability and schedule
+                a visit!</strong
+              >
+            </p>
+            <p style="margin-top: 20px">
+              📞 <strong>Call us:</strong> [Your Phone Number]<br />
+              📧 <strong>Email us:</strong> [Your Email]<br />
+              🌐 <strong>Visit:</strong> doodledandy.dog
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px">
+        <a href="../" class="back-button">← Back to Main Site</a>
+      </div>
+
+      <div class="footer">
+        <p>&copy; 2025 Doodle Dandy. All rights reserved.</p>
+        <p>Raising healthy, happy doodles with love and care.</p>
+      </div>
+    </div>
+  </body>
+</html>

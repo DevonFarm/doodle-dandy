@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer Safety Guide - Doodle Dandy</title>
+    <meta
+      name="description"
+      content="Complete summer safety guide for your Doodle. Learn essential heat protection tips, warning signs, and how to keep your Aussiedoodle or Bernedoodle safe during hot weather."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Georgia", serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #ffd93d 0%, #ff9800 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header-logo {
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 30px auto;
+        display: block;
+        animation: fadeIn 1s ease-out 0.2s both;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+      }
+
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+        padding: 40px 0;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        animation: fadeInDown 1s ease-out;
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease-out 0.3s both;
+      }
+
+      .nav-breadcrumb {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px 25px;
+        border-radius: 25px;
+        margin-bottom: 30px;
+        text-align: center;
+        animation: fadeIn 1s ease-out 0.4s both;
+      }
+
+      .nav-breadcrumb a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: opacity 0.3s ease;
+      }
+
+      .nav-breadcrumb a:hover {
+        opacity: 0.8;
+      }
+
+      .content-section {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        overflow: hidden;
+        animation: fadeIn 1s ease-out 0.6s both;
+      }
+
+      .section-header {
+        background: linear-gradient(135deg, #ff6f00 0%, #ff9800 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .section-header h2 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      .section-header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .section-content {
+        padding: 40px;
+      }
+
+      .emergency-alert {
+        background: linear-gradient(135deg, #ff5722 0%, #d32f2f 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        color: white;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        border: 3px solid #b71c1c;
+      }
+
+      .emergency-alert h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .emergency-alert p {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+      }
+
+      .emergency-alert .urgent {
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .safety-tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin: 30px 0;
+      }
+
+      .safety-tip-card {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 3px solid transparent;
+      }
+
+      .safety-tip-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .safety-tip-card.heat-stroke {
+        border-color: #ff5722;
+      }
+
+      .safety-tip-card.exercise {
+        border-color: #2196f3;
+      }
+
+      .safety-tip-card.shade-water {
+        border-color: #4caf50;
+      }
+
+      .safety-tip-card.asphalt {
+        border-color: #ff9800;
+      }
+
+      .safety-tip-card.cars {
+        border-color: #9c27b0;
+      }
+
+      .tip-icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      .safety-tip-card h3 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+      }
+
+      .safety-tip-card p {
+        color: #495057;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+
+      .warning-signs {
+        background: linear-gradient(135deg, #fff3e0 0%, #ffcc02 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        border-left: 5px solid #ff8f00;
+      }
+
+      .warning-signs h3 {
+        color: #e65100;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .warning-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .warning-item {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .warning-item .warning-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        display: block;
+        color: #ff5722;
+      }
+
+      .warning-item h4 {
+        color: #d84315;
+        margin-bottom: 5px;
+      }
+
+      .warning-item p {
+        color: #5d4037;
+        font-size: 0.9rem;
+      }
+
+      .prevention-tips {
+        background: linear-gradient(135deg, #e8f5e8 0%, #4caf50 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        color: white;
+      }
+
+      .prevention-tips h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .prevention-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .prevention-list li {
+        background: rgba(255, 255, 255, 0.1);
+        margin-bottom: 10px;
+        padding: 15px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .prevention-list li::before {
+        content: "✅";
+        font-size: 1.2rem;
+      }
+
+      .emergency-contact {
+        background: #e3f2fd;
+        border-radius: 15px;
+        padding: 30px;
+        margin: 30px 0;
+        text-align: center;
+        border: 3px solid #1976d2;
+      }
+
+      .emergency-contact h3 {
+        color: #0d47a1;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      .emergency-contact p {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+      }
+
+      .emergency-contact .phone {
+        background: #1976d2;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 25px;
+        display: inline-block;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.2rem;
+        margin-top: 10px;
+      }
+
+      .back-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 30px;
+      }
+
+      .back-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      .pulse {
+        animation: pulse 2s infinite;
+      }
+
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2.2rem;
+        }
+
+        .section-content {
+          padding: 25px 20px;
+        }
+
+        .safety-tips-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .warning-list {
+          grid-template-columns: 1fr;
+        }
+
+        .emergency-alert,
+        .warning-signs,
+        .prevention-tips,
+        .emergency-contact {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://doodledandy.dog/assets/images/header.png"
+          alt="Doodle Dandy"
+          class="header-logo"
+        />
+        <h1>☀️ Summer Safety Guide</h1>
+        <p>Essential heat protection for your beloved Doodle</p>
+      </div>
+
+      <div class="nav-breadcrumb">
+        <a href="../blog/">← Back to Blog</a> | <a href="../">Home</a>
+      </div>
+
+      <!-- EMERGENCY ALERT SECTION -->
+      <div class="emergency-alert pulse">
+        <h3>🚨 HEAT STROKE IS A MEDICAL EMERGENCY! 🚨</h3>
+        <div class="urgent">
+          If you see these signs, seek vet care immediately:
+        </div>
+        <p>
+          <strong>Excess Panting • Discolored Gums • Mobility Issues</strong>
+        </p>
+        <p>Don't wait - every minute counts in hot weather emergencies!</p>
+      </div>
+
+      <div class="content-section">
+        <div class="section-header">
+          <h2>🌡️ Critical Summer Safety Tips</h2>
+          <p>Protecting your Doodle from heat-related dangers</p>
+        </div>
+        <div class="section-content">
+          <!-- INFOGRAPHIC SECTION -->
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 40px;
+              background: linear-gradient(135deg, #fff3e0 0%, #ffcc02 20%);
+              padding: 30px;
+              border-radius: 15px;
+              box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h3 style="color: #e65100; font-size: 1.8rem; margin-bottom: 20px">
+              📋 Quick Reference Guide
+            </h3>
+            <p
+              style="
+                color: #ef6c00;
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+                font-weight: 500;
+              "
+            >
+              Save this image to your phone for quick reference!
+            </p>
+            <img
+              src="https://i.ibb.co/SXYFWjCg/heat.png"
+              alt="Doodle Summer Safety Infographic - Heat stroke warning signs and prevention tips"
+              style="
+                max-width: 100%;
+                height: auto;
+                border-radius: 15px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+                border: 3px solid #ff8f00;
+              "
+            />
+            <p
+              style="
+                color: #ef6c00;
+                font-size: 0.9rem;
+                margin-top: 15px;
+                font-style: italic;
+              "
+            >
+              Click to save or share this essential summer safety guide!
+            </p>
+          </div>
+
+          <div class="safety-tips-grid">
+            <div class="safety-tip-card heat-stroke">
+              <span class="tip-icon">🌡️</span>
+              <h3>Heat Stroke Warning</h3>
+              <p><strong>Watch for these danger signs:</strong></p>
+              <p>• Excessive panting that doesn't stop</p>
+              <p>• Discolored gums (bright red or pale)</p>
+              <p>• Difficulty moving or walking</p>
+              <p>• Drooling excessively</p>
+              <p>• Vomiting or diarrhea</p>
+              <p>
+                <strong>ACTION:</strong> Move to shade, offer water, and call
+                your vet immediately!
+              </p>
+            </div>
+
+            <div class="safety-tip-card exercise">
+              <span class="tip-icon">🏃‍♂️</span>
+              <h3>Limit Exercise</h3>
+              <p>
+                <strong
+                  >Watch carefully so they do not over exert in the
+                  heat!</strong
+                >
+              </p>
+              <p>• Schedule walks for early morning or late evening</p>
+              <p>• Avoid midday sun (10am-4pm)</p>
+              <p>• Take frequent water breaks</p>
+              <p>• Let them rest in shade often</p>
+              <p>• Watch for heavy panting as a stop signal</p>
+            </div>
+
+            <div class="safety-tip-card shade-water">
+              <span class="tip-icon">🌳</span>
+              <h3>Shade & Water</h3>
+              <p>
+                <strong
+                  >Always provide protection from the sun and keep them well
+                  hydrated</strong
+                >
+              </p>
+              <p>• Create shaded areas with umbrellas or tarps</p>
+              <p>• Fresh, cool water available at all times</p>
+              <p>• Add ice cubes to water bowls</p>
+              <p>• Consider cooling mats for resting</p>
+              <p>• Bring portable water on all outings</p>
+            </div>
+
+            <div class="safety-tip-card asphalt">
+              <span class="tip-icon">🛣️</span>
+              <h3>Hot Asphalt Test</h3>
+              <p>
+                <strong
+                  >If it's too hot for your bare feet, it's too hot for their
+                  paws!</strong
+                >
+              </p>
+              <p>• Use the "7-second test" - hold your hand on pavement</p>
+              <p>
+                • If you can't keep it there for 7 seconds, don't walk your dog
+              </p>
+              <p>• Walk on grass when possible</p>
+              <p>• Consider protective booties</p>
+              <p>• Check paw pads after walks for burns</p>
+            </div>
+
+            <div class="safety-tip-card cars">
+              <span class="tip-icon">🚗</span>
+              <h3>Never Leave in Cars</h3>
+              <p>
+                <strong
+                  >Don't leave your Doodle in the car, even with windows
+                  cracked</strong
+                >
+              </p>
+              <p>• Car temperatures can reach 120°F+ in minutes</p>
+              <p>• Even on 70°F days, cars become deadly</p>
+              <p>• Cracked windows don't provide enough cooling</p>
+              <p>• Leave them at home instead</p>
+              <p>• Use drive-throughs when you must bring them</p>
+            </div>
+
+            <div class="safety-tip-card">
+              <span class="tip-icon">🏊‍♂️</span>
+              <h3>Water Activities</h3>
+              <p><strong>Safe water fun for cooling down</strong></p>
+              <p>• Kiddie pools in the shade</p>
+              <p>• Sprinkler play (supervise always)</p>
+              <p>• Wet towels on their body</p>
+              <p>• Frozen treats and ice cubes</p>
+              <p>• Always supervise around water</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WARNING SIGNS SECTION -->
+      <div class="content-section">
+        <div class="section-header">
+          <h2>⚠️ Heat Stress Warning Signs</h2>
+          <p>Know what to watch for - early detection saves lives</p>
+        </div>
+        <div class="section-content">
+          <div class="warning-signs">
+            <h3>🔍 What to Watch For</h3>
+
+            <div class="warning-list">
+              <div class="warning-item">
+                <span class="warning-icon">🫁</span>
+                <h4>Breathing Changes</h4>
+                <p>
+                  Heavy panting that doesn't stop, difficulty breathing, or
+                  gasping
+                </p>
+              </div>
+
+              <div class="warning-item">
+                <span class="warning-icon">👅</span>
+                <h4>Gum Color</h4>
+                <p>
+                  Bright red, dark red, or pale/white gums instead of healthy
+                  pink
+                </p>
+              </div>
+
+              <div class="warning-item">
+                <span class="warning-icon">🚶‍♂️</span>
+                <h4>Movement Issues</h4>
+                <p>Stumbling, weakness, inability to stand, or collapse</p>
+              </div>
+
+              <div class="warning-item">
+                <span class="warning-icon">💧</span>
+                <h4>Excessive Drooling</h4>
+                <p>Thick, ropey saliva or drooling much more than normal</p>
+              </div>
+
+              <div class="warning-item">
+                <span class="warning-icon">🤮</span>
+                <h4>Digestive Upset</h4>
+                <p>Vomiting, diarrhea, or loss of appetite</p>
+              </div>
+
+              <div class="warning-item">
+                <span class="warning-icon">🌡️</span>
+                <h4>Body Temperature</h4>
+                <p>Body feels very hot to touch, especially ears and belly</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PREVENTION TIPS SECTION -->
+      <div class="content-section">
+        <div class="section-header">
+          <h2>🛡️ Prevention is Key</h2>
+          <p>Simple steps to keep your Doodle safe and comfortable</p>
+        </div>
+        <div class="section-content">
+          <div class="prevention-tips">
+            <h3>✅ Your Summer Safety Checklist</h3>
+
+            <ul class="prevention-list">
+              <li>
+                Plan outdoor activities for cooler parts of the day (before
+                10am, after 6pm)
+              </li>
+              <li>Always carry fresh water and a portable bowl on outings</li>
+              <li>Test pavement temperature with your hand before walks</li>
+              <li>Create multiple shaded rest areas in your yard</li>
+              <li>
+                Keep your Doodle's coat properly groomed (but don't shave
+                completely)
+              </li>
+              <li>Use cooling accessories like vests, mats, or bandanas</li>
+              <li>
+                Never leave your dog in a parked vehicle - not even for "just a
+                minute"
+              </li>
+              <li>Watch for early warning signs during any outdoor activity</li>
+              <li>
+                Have your vet's emergency contact information readily available
+              </li>
+              <li>Consider indoor activities during extreme heat days</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMERGENCY CONTACT SECTION -->
+      <div class="emergency-contact">
+        <h3>🏥 Emergency Preparedness</h3>
+        <p><strong>Keep these numbers handy during summer months:</strong></p>
+        <p>• Your regular veterinarian's contact info</p>
+        <p>• Nearest emergency animal hospital</p>
+        <p>• Pet poison control hotline: (855) 764-7661</p>
+
+        <p style="margin-top: 20px">
+          <strong>For immediate heat stroke:</strong>
+        </p>
+        <p>
+          Move to shade → Offer water → Cool with wet towels → Call vet
+          immediately
+        </p>
+
+        <a href="tel:your-vet-number" class="phone">📞 Call Your Vet</a>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px">
+        <a href="../blog/" class="back-button">← Back to Blog</a>
+        <a href="../" class="back-button" style="margin-left: 15px">← Home</a>
+      </div>
+    </div>
+  </body>
+</html>
