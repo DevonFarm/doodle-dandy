@@ -169,6 +169,67 @@
         background: #f8f9fa;
       }
 
+      /* URGENT LITTERMATE SYNDROME POST */
+      .urgent-post {
+        background: linear-gradient(135deg, #43323e 0%, #ff3742 100%);
+        color: white;
+        border-left: 5px solid #220219;
+        position: relative;
+        overflow: hidden;
+        animation: pulse-border 2s infinite;
+      }
+
+      @keyframes pulse-border {
+        0%, 100% { border-left-color: #ff1e2d; }
+        50% { border-left-color: #ff6b7a; }
+      }
+
+      .urgent-post::before {
+        content: "🛟 SUPPORT 🛟";
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #ff1e2d;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 0.8em;
+        font-weight: bold;
+        animation: flash 1.5s infinite;
+      }
+
+      @keyframes flash {
+        0%, 50%, 100% { opacity: 1; }
+        25%, 75% { opacity: 0.7; }
+      }
+
+      .urgent-post h2 {
+        color: white;
+        font-size: 1.4em;
+      }
+
+      .urgent-post .blog-meta {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .urgent-post .blog-excerpt {
+        color: white;
+        font-weight: 500;
+      }
+
+      .urgent-post .read-more {
+        background: white;
+        color: #ff4757;
+        font-weight: bold;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .urgent-post .read-more:hover {
+        background: #f8f9fa;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      }
+
       /* Summer Safety Specific Styles */
       .summer-safety-post {
         background: linear-gradient(135deg, #ffd93d 0%, #ff9800 100%);
@@ -475,6 +536,16 @@
           class="category-tag"
           >☀️ Summer Safety</a
         >
+        <a
+          href="https://doodledandy.dog/blog/bernedoodle-vs-aussiedoodle/"
+          class="category-tag"
+          >🤔 Breed Comparison</a
+        >
+        <a
+          href="https://doodledandy.dog/blog/littermate/"
+          class="category-tag"
+          >🆘 Littermate Syndrome</a
+        >
       </div>
 
       <!-- NEW PUPPY OWNERS SPECIAL SECTION -->
@@ -494,6 +565,23 @@
           🐾 Congrats 🎉 →
         </a>
       </div>
+
+      <!-- URGENT LITTERMATE SYNDROME POST -->
+      <article class="blog-post urgent-post">
+        <h2>
+          🚨 Littermate Syndrome: Your Survival Guide
+        </h2>
+        <div class="blog-meta">July 11, 2025 • Raising Littermates Puppy Care</div>
+        <div class="blog-excerpt">
+          <strong>Did you bring home TWO babies from one litter:</strong>  This isn't just a challenge—it's a potential crisis that requires immediate action. Every day matters! Learn the essential 80/20 rule, separation protocols, and emergency strategies to prevent behavioral disasters and raise two healthy, independent Doodles. Start these life-saving techniques TODAY.
+        </div>
+        <a
+          href="https://doodledandy.dog/blog/littermate/"
+          class="read-more"
+        >
+          🆘 Get the support you need now →</a
+        >
+      </article>
 
       <!-- NEW BREED COMPARISON POST -->
       <article class="blog-post breed-comparison-post">
@@ -750,46 +838,4 @@
         </div>
       </div>
 
-      <!-- Back to main site -->
-      <div style="text-align: center; margin-top: 40px">
-        <a
-          href="/"
-          style="
-            background: #667eea;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-          "
-        >
-          ← Back to Doodle Dandy Home
-        </a>
-      </div>
-    </main>
-
-    <footer>
-      <p>
-        © 2025 Doodle Dandy. All rights reserved. | Made with ❤️ for our puppy
-        families
-      </p>
-    </footer>
-
-    <script>
-      function ml_webform_success_27715211() {
-        var $ = ml_jQuery || jQuery;
-        $(".ml-subscribe-form-27715211 .row-success").show();
-        $(".ml-subscribe-form-27715211 .row-form").hide();
-      }
-    </script>
-    <script
-      src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
-      type="text/javascript"
-    ></script>
-    <script>
-      fetch(
-        "https://assets.mailerlite.com/jsonp/1624469/forms/158328150624831106/takel"
-      );
-    </script>
-  </body>
-</html>
+      <!-- Back to main site
