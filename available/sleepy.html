@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sleepy - Mini Aussiedoodle | Doodle Dandy</title>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XNTSJK2XH8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XNTSJK2XH8");
+    </script>
+    <link rel="stylesheet" href="../assets/vendor/simplecss/simple.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/fontawesome/6.2.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/fontawesome/6.2.1/css/brands.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/fontawesome/6.2.1/css/solid.min.css"
+    />
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <style>
+      /* Hero Section */
+      .puppy-hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+        margin: -20px -20px 40px -20px;
+        border-radius: 0 0 20px 20px;
+      }
+
+      .puppy-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .puppy-hero p {
+        font-size: 1.3rem;
+        opacity: 0.95;
+        margin-bottom: 20px;
+      }
+
+      .status-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        box-shadow: 0 8px 25px rgba(78, 205, 196, 0.3);
+        margin-top: 10px;
+      }
+
+      /* Quick Info Section */
+      .quick-info {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin: 40px 0;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .info-item {
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 15px;
+      }
+
+      .info-label {
+        font-size: 0.9rem;
+        color: #6c757d;
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+
+      .info-value {
+        font-size: 1.3rem;
+        color: #2c3e50;
+        font-weight: 700;
+      }
+
+      /* Photo Gallery Grid */
+      .photo-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 40px 0;
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* About Section */
+      .about-section {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin: 40px 0;
+      }
+
+      .about-section h2 {
+        color: #2c3e50;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .about-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+
+      /* Apply Button */
+      .apply-section {
+        text-align: center;
+        margin: 50px 0;
+      }
+
+      .apply-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 20px 50px;
+        border: none;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+      }
+
+      .apply-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+      }
+
+      .back-link {
+        display: inline-block;
+        margin: 30px 0;
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .quick-info {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .photo-gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .puppy-hero h1 {
+          font-size: 2rem;
+        }
+
+        .about-section {
+          padding: 25px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="../assets/images/header.png" alt="Doodle Dandy" />
+      <nav>
+        <a href="/">Home</a>
+        <a href="/bernedoodle/">Bernedoodles</a>
+        <a href="/aussiedoodle">Aussiedoodles</a>
+        <a href="/about">About us</a>
+        <a href="/news">News</a>
+        <a href="/available">Available Puppies</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact us</a>
+      </nav>
+    </header>
+
+    <main>
+      <a href="/available" class="back-link">← Back to Available Puppies</a>
+
+      <!-- Hero Section -->
+      <div class="puppy-hero">
+        <h1>💤 Meet Sleepy</h1>
+        <p>The Dreamy Chocolate Boy</p>
+        <span class="status-badge">Available</span>
+      </div>
+
+      <!-- Quick Info -->
+      <div class="quick-info">
+        <div class="info-item">
+          <div class="info-label">Gender</div>
+          <div class="info-value">Male</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Color</div>
+          <div class="info-value">Chocolate</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Expected Size</div>
+          <div class="info-value">20-35 lbs</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Ready Date</div>
+          <div class="info-value">Dec 20, 2025</div>
+        </div>
+      </div>
+
+      <!-- About Sleepy -->
+      <div class="about-section">
+        <h2>🌟 About Sleepy</h2>
+        <p>💤 MEET SLEEPY - THE DREAMY CHOCOLATE BOY! 💤</p>
+        <p>
+          Introducing Sleepy, our gorgeous chocolate boy from the Seven Dwarfs
+          litter! With his rich, beautiful coat, this little guy is as sweet as
+          he is handsome! 🍫✨
+        </p>
+        <p>
+          True to his name, Sleepy is our laid-back cuddle bug who believes that
+          life's best moments happen in someone's arms! He's mastered the art of
+          the perfect puppy nap and thinks every lap is his personal sleep
+          sanctuary. 😴💕
+        </p>
+        <p>
+          Don't let that relaxed demeanor fool you though - when playtime calls,
+          Sleepy is right there with his siblings! He just prefers to balance
+          his fun with plenty of snuggle sessions. It's all about that perfect
+          work-life balance, right? 🎀
+        </p>
+        <p>
+          With mama Sassy's confidence and daddy Chip's gentle nature, Sleepy
+          has inherited the best of both worlds. He's the puppy who will happily
+          play fetch, then curl up beside you for movie night! 🏔️
+        </p>
+        <p>
+          This chocolate sweetheart is ready to bring calm, cuddly love to his
+          forever family! Hi-Ho, Hi-Ho, it's off to dreamland we go! 💤✨
+        </p>
+      </div>
+
+      <!-- Photo Gallery -->
+      <h2
+        style="
+          text-align: center;
+          color: #2c3e50;
+          font-size: 2rem;
+          margin: 40px 0 20px 0;
+        "
+      >
+        📸 Photo Gallery
+      </h2>
+      <div class="photo-gallery">
+        <div class="gallery-item">
+          <img
+            src="https://i.ibb.co/20cNw6x6/IMG-0382.png"
+            alt="Sleepy Photo 1"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://i.ibb.co/wZ2cqT2H/IMG-0386.png"
+            alt="Sleepy Photo 2"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://i.ibb.co/TDFGvSsV/IMG-0397.png"
+            alt="Sleepy Photo 3"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://i.ibb.co/GQLrp5NH/IMG-0390.png"
+            alt="Sleepy Photo 4"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://i.ibb.co/G3BcPWYg/IMG-0351.png"
+            alt="Sleepy Photo 5"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://i.ibb.co/bjdGmvJY/IMG-0346.png"
+            alt="Sleepy Photo 6"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://i.ibb.co/NgCPvMmk/IMG-0371.png"
+            alt="Sleepy Photo 7"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://i.ibb.co/mC1tRpHN/IMG-0396.png"
+            alt="Sleepy Photo 8"
+          />
+        </div>
+      </div>
+
+      <!-- Apply Section -->
+      <div class="apply-section">
+        <h2 style="color: #2c3e50; margin-bottom: 20px">
+          Ready to Welcome Sleepy Home?
+        </h2>
+        <a
+          href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+          target="_blank"
+          class="apply-button"
+        >
+          Apply for Sleepy <i class="fa-solid fa-paw"></i>
+        </a>
+      </div>
+
+      <a href="/available" class="back-link">← Back to Available Puppies</a>
+    </main>
+
+    <footer>
+      <p>
+        © 2025 Doodle Dandy. All rights reserved. | Made with ❤️ for our puppy
+        families
+      </p>
+    </footer>
+  </body>
+</html>
