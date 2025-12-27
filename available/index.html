@@ -177,6 +177,85 @@
         margin-bottom: 10px;
       }
 
+      /* Filter Section */
+      .filter-section {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin: 30px 20px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .filter-title {
+        color: #2c3e50;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .filter-groups {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .filter-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .filter-group-title {
+        font-size: 0.9rem;
+        color: #6c757d;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .filter-buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+        color: #2c3e50;
+        border: 2px solid #dee2e6;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: capitalize;
+      }
+
+      .filter-btn:hover {
+        background: linear-gradient(145deg, #e9ecef 0%, #dee2e6 100%);
+        transform: translateY(-2px);
+      }
+
+      .filter-btn.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-color: #667eea;
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+      }
+
+      .puppy-count {
+        text-align: center;
+        color: #6c757d;
+        font-size: 1rem;
+        margin-top: 15px;
+        font-weight: 500;
+      }
+
       /* Force True 3-Column Layout */
       .puppies-grid {
         display: grid;
@@ -187,6 +266,10 @@
         max-width: 1400px;
         margin-left: auto;
         margin-right: auto;
+      }
+
+      .puppy-card.hidden {
+        display: none;
       }
 
       .puppy-card {
@@ -579,6 +662,15 @@
         .gallery-iframe {
           height: 300px;
         }
+
+        .filter-groups {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .filter-buttons {
+          justify-content: center;
+        }
       }
     </style>
   </head>
@@ -634,10 +726,49 @@
         </div>
       </div>
 
+      <!-- Filter Section -->
+      <div class="filter-section">
+        <h3 class="filter-title">🔍 Filter Puppies</h3>
+        <div class="filter-groups">
+          <div class="filter-group">
+            <span class="filter-group-title">Gender</span>
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="gender" data-value="all">
+                All
+              </button>
+              <button class="filter-btn" data-filter="gender" data-value="male">
+                🐶 Males
+              </button>
+              <button class="filter-btn" data-filter="gender" data-value="female">
+                🐕 Females
+              </button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-group-title">Status</span>
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="status" data-value="all">
+                All
+              </button>
+              <button class="filter-btn" data-filter="status" data-value="available">
+                💚 Available
+              </button>
+              <button class="filter-btn" data-filter="status" data-value="reserved">
+                🧡 Reserved
+              </button>
+              <button class="filter-btn" data-filter="status" data-value="adopted">
+                💗 Adopted
+              </button>
+            </div>
+          </div>
+        </div>
+        <p class="puppy-count">Showing <span id="puppy-count">16</span> puppies</p>
+      </div>
+
       <!-- Puppy Cards Grid -->
       <div class="puppies-grid">
         <!-- Puppy Card 1 - Sleepy Dwarf -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="male" data-status="available">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/pj73NVts/IMG-7677.png"
@@ -650,7 +781,7 @@
             <div class="puppy-details">
               <div class="detail-item">
                 <div class="detail-label">Gender</div>
-                <div class="detail-value">Male</div>
+                <div class="det data-gender="male" data-status="available"ail-value">Male</div>
               </div>
               <div class="detail-item">
                 <div class="detail-label">Color</div>
@@ -744,7 +875,7 @@
           </div>
         </div>
         <!-- Puppy Card 3 - Happy -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="male" data-status="reserved">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/CKJwCwcg/IMG-0554-2.png"
@@ -800,7 +931,7 @@
           </div>
         </div>
         <!-- Puppy Card 4 - Dopey -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="male" data-status="available">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/kgbwgjR7/IMG-0403.png"
@@ -855,7 +986,7 @@
         </div>
 
         <!-- Puppy Card 5 - Sneezy -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="female" data-status="reserved">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/S4TfPJVq/IMG-0523-2.png"
@@ -911,7 +1042,7 @@
         </div>
 
         <!-- Puppy Card 6 - Bashful -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="female" data-status="available">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/cKpb17Nm/IMG-0018.png"
@@ -969,7 +1100,7 @@
         </div>
 
         <!-- Puppy Card 7 - Doc -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="female" data-status="adopted">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/RWv6TvH/IMG-0177.png"
@@ -1024,7 +1155,7 @@
         </div>
 
         <!-- Puppy Card 8 -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="male" data-status="reserved">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/d4MRW5Zj/IMG-8976.png"
@@ -1079,7 +1210,7 @@
         </div>
 
         <!-- Puppy Card 9 -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="male" data-status="available">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/XfVTdGsv/IMG-9777.png"
@@ -1136,7 +1267,7 @@
         </div>
 
         <!-- Puppy Card 10 -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="male" data-status="reserved">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/zc20FKG/IMG-9342.png"
@@ -1193,7 +1324,7 @@
         </div>
 
         <!-- Puppy Card 11 -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="male" data-status="available">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/7xfgHmqL/IMG-9033.png"
@@ -1249,7 +1380,7 @@
         </div>
 
         <!-- Puppy Card 12 -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="male" data-status="available">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/gMwG7KTz/IMG-9325.png"
@@ -1306,7 +1437,7 @@
         </div>
 
         <!-- Puppy Card 13 -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="female" data-status="reserved">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/DPqNdxh5/IMG-8983.png"
@@ -1363,7 +1494,7 @@
         </div>
 
         <!-- Puppy Card 14 -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="female" data-status="available">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/GvfHZvn1/IMG-9444.png"
@@ -1420,7 +1551,7 @@
         </div>
 
         <!-- Puppy Card 15 -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="female" data-status="available">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/JRk7b8fx/IMG-9543.png"
@@ -1477,7 +1608,7 @@
         </div>
 
         <!-- Puppy Card 16 -->
-        <div class="puppy-card">
+        <div class="puppy-card" data-gender="female" data-status="adopted">
           <div class="puppy-image">
             <img
               src="https://i.ibb.co/FbJ82vWL/IMG-9620.png"
@@ -1610,6 +1741,58 @@
         families
       </p>
     </footer>
+
+    <script>
+      // Filter functionality
+      const filterState = {
+        gender: 'all',
+        status: 'all'
+      };
+
+      function filterPuppies() {
+        const puppyCards = document.querySelectorAll('.puppy-card');
+        let visibleCount = 0;
+
+        puppyCards.forEach(card => {
+          const cardGender = card.dataset.gender;
+          const cardStatus = card.dataset.status;
+
+          const genderMatch = filterState.gender === 'all' || cardGender === filterState.gender;
+          const statusMatch = filterState.status === 'all' || cardStatus === filterState.status;
+
+          if (genderMatch && statusMatch) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        // Update count
+        document.getElementById('puppy-count').textContent = visibleCount;
+      }
+
+      // Add click handlers to all filter buttons
+      document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', function() {
+          const filterType = this.dataset.filter;
+          const filterValue = this.dataset.value;
+
+          // Update filter state
+          filterState[filterType] = filterValue;
+
+          // Update active state for buttons in this group
+          const group = this.closest('.filter-group');
+          group.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          this.classList.add('active');
+
+          // Apply filters
+          filterPuppies();
+        });
+      });
+    </script>
   </body>
 </html>
 ">
