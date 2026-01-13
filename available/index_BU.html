@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Updated: 2026-01-13 -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Available Puppies | Doodle Dandy</title>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://docs.google.com/presentation/d/1Q_-2plJPtFu_HmNyItP82tvo6K6S6Z4CT8wjn8NApQo/edit?usp=sharing&pli=1&authuser=0"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XNTSJK2XH8");
+    </script>
+
+    <link rel="stylesheet" href="../assets/vendor/simplecss/simple.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/fontawesome/6.2.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/fontawesome/6.2.1/css/brands.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/fontawesome/6.2.1/css/solid.min.css"
+    />
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <style>
+      /* Floating Bubbles Animation */
+      .floating-bubbles {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        margin: -20px -20px 40px -20px;
+        border-radius: 0 0 20px 20px;
+      }
+
+      .bubble {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation: float 6s infinite ease-in-out;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .bubble:nth-child(1) {
+        width: 60px;
+        height: 60px;
+        left: 10%;
+        animation-delay: 0s;
+        animation-duration: 6s;
+      }
+
+      .bubble:nth-child(2) {
+        width: 40px;
+        height: 40px;
+        left: 20%;
+        animation-delay: 1s;
+        animation-duration: 8s;
+      }
+
+      .bubble:nth-child(3) {
+        width: 80px;
+        height: 80px;
+        left: 35%;
+        animation-delay: 2s;
+        animation-duration: 7s;
+      }
+
+      .bubble:nth-child(4) {
+        width: 30px;
+        height: 30px;
+        left: 50%;
+        animation-delay: 0.5s;
+        animation-duration: 9s;
+      }
+
+      .bubble:nth-child(5) {
+        width: 70px;
+        height: 70px;
+        left: 65%;
+        animation-delay: 3s;
+        animation-duration: 6s;
+      }
+
+      .bubble:nth-child(6) {
+        width: 50px;
+        height: 50px;
+        left: 80%;
+        animation-delay: 1.5s;
+        animation-duration: 8s;
+      }
+
+      .bubble:nth-child(7) {
+        width: 35px;
+        height: 35px;
+        left: 90%;
+        animation-delay: 2.5s;
+        animation-duration: 7s;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(200px) rotate(0deg);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100px) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      /* Litter Header */
+      .litter-header {
+        text-align: center;
+        background: white;
+        padding: 40px 20px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .litter-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .litter-header h2 {
+        color: #2c3e50;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .litter-subtitle {
+        color: #7f8c8d;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      .litter-description {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 20px 0;
+        border-left: 4px solid #667eea;
+        color: #2c3e50;
+      }
+
+      .litter-description p {
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      /* Filter Section */
+      .filter-section {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin: 30px 20px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .filter-title {
+        color: #2c3e50;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .filter-groups {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .filter-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .filter-group-title {
+        font-size: 0.9rem;
+        color: #6c757d;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .filter-buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+        color: #2c3e50;
+        border: 2px solid #dee2e6;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: capitalize;
+      }
+
+      .filter-btn:hover {
+        background: linear-gradient(145deg, #e9ecef 0%, #dee2e6 100%);
+        transform: translateY(-2px);
+      }
+
+      .filter-btn.active {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-color: #667eea;
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+      }
+
+      .puppy-count {
+        text-align: center;
+        color: #6c757d;
+        font-size: 1rem;
+        margin-top: 15px;
+        font-weight: 500;
+      }
+
+      /* Force True 3-Column Layout */
+      .puppies-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin: 60px 0;
+        padding: 0 20px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .puppy-card.hidden {
+        display: none;
+      }
+
+      .puppy-card {
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.9) 0%,
+          rgba(255, 255, 255, 0.7) 100%
+        );
+        backdrop-filter: blur(20px);
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1),
+          0 10px 30px rgba(0, 0, 0, 0.05),
+          inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        position: relative;
+        transform-style: preserve-3d;
+      }
+
+      .puppy-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          145deg,
+          rgba(102, 126, 234, 0.03) 0%,
+          rgba(118, 75, 162, 0.03) 50%,
+          rgba(255, 182, 193, 0.03) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: 30px;
+      }
+
+      .puppy-card:hover {
+        transform: translateY(-15px) rotateX(5deg);
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15),
+          0 20px 40px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      }
+
+      .puppy-card:hover::before {
+        opacity: 1;
+      }
+
+      .puppy-image {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 25px 25px 0 0;
+      }
+
+      /* Reserved and Adopted card backgrounds - BRIGHT PASTELS */
+
+      .puppy-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.4s ease;
+        border-radius: 25px 25px 0 0;
+      }
+
+      .puppy-card:hover .puppy-image img {
+        transform: scale(1.08);
+        filter: brightness(1.1) saturate(1.1);
+      }
+
+      .puppy-status {
+        position: absolute;
+        bottom: 15px; /* Changed from top: 20px */
+        right: 15px; /* Keep the same */
+        background: linear-gradient(135deg, #737676 0%, #44a08d 100%);
+        color: white;
+        padding: 10px 18px;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        box-shadow: 0 8px 25px rgba(78, 205, 196, 0.3);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .puppy-status.reserved {
+        background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+        box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+      }
+
+      .puppy-status.adopted {
+        background: linear-gradient(135deg, #e6a8a8 0%, #b2319c 100%);
+        box-shadow: 0 8px 25px rgba(230, 168, 172, 0.3);
+      }
+
+      .puppy-info {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+      }
+
+      .puppy-name {
+        font-size: 1.6rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 12px;
+        font-weight: 700;
+        text-align: center;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .puppy-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 15px 0;
+      }
+
+      .detail-item {
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.8) 0%,
+          rgba(255, 255, 255, 0.4) 100%
+        );
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
+          inset 0 1px 0 rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+      }
+
+      .detail-item:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      }
+
+      .detail-label {
+        font-size: 0.75rem;
+        color: #6c757d;
+        margin-bottom: 4px;
+        font-weight: 500;
+      }
+
+      .detail-value {
+        font-weight: 700;
+        color: #2c3e50;
+        font-size: 0.9rem;
+      }
+
+      .puppy-personality {
+        background: linear-gradient(
+          145deg,
+          rgba(52, 152, 219, 0.1) 0%,
+          rgba(155, 89, 182, 0.1) 100%
+        );
+        padding: 12px;
+        border-radius: 12px;
+        margin: 15px 0;
+        border: 1px solid rgba(52, 152, 219, 0.2);
+        box-shadow: 0 6px 15px rgba(52, 152, 219, 0.05),
+          inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+      }
+
+      .personality-title {
+        font-weight: 700;
+        background: linear-gradient(135deg, #3498db 0%, #9b59b6 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 6px;
+        font-size: 0.9rem;
+      }
+
+      .personality-traits {
+        color: #34495e;
+        font-style: italic;
+        line-height: 1.3;
+        font-size: 0.8rem;
+      }
+
+      .puppy-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .more-info-button {
+        background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        flex: 1;
+        box-shadow: 0 8px 20px rgba(116, 185, 255, 0.3),
+          0 3px 10px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .more-info-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .more-info-button:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 12px 25px rgba(116, 185, 255, 0.4),
+          0 5px 15px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+      }
+
+      .more-info-button:hover::before {
+        left: 100%;
+      }
+
+      .apply-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        flex: 1;
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3),
+          0 3px 10px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .apply-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .apply-button:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 12px 25px rgba(102, 126, 234, 0.4),
+          0 5px 15px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+      }
+
+      .apply-button:hover::before {
+        left: 100%;
+      }
+
+      /* Application Section */
+      .application-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 50px 20px;
+        border-radius: 20px;
+        text-align: center;
+        margin: 50px 0;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      }
+
+      .application-section h3 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      .application-section p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-apply-button {
+        background: white;
+        color: #667eea;
+        padding: 20px 40px;
+        border: none;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .main-apply-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Gallery Section */
+      .gallery-section {
+        margin: 50px 0;
+        text-align: center;
+      }
+
+      .gallery-section h3 {
+        color: #2c3e50;
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+
+      .gallery-iframe {
+        width: 100%;
+        max-width: 600px;
+        height: 400px;
+        border-radius: 15px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .puppies-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .floating-bubbles {
+          height: 150px;
+        }
+
+        .litter-header h2 {
+          font-size: 2rem;
+        }
+
+        .puppies-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .puppy-details {
+          grid-template-columns: 1fr;
+        }
+
+        .application-section {
+          padding: 30px 15px;
+        }
+
+        .application-section h3 {
+          font-size: 1.8rem;
+        }
+
+        .gallery-iframe {
+          height: 300px;
+        }
+
+        .filter-groups {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .filter-buttons {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="../assets/images/header.png" alt="Doodle Dandy" />
+      <nav>
+        <a href="/">Home</a>
+        <a href="/bernedoodle/">Bernedoodles</a>
+        <a href="/aussiedoodle">Aussiedoodles</a>
+        <a href="/about">About us</a>
+        <a href="/news">News</a>
+        <a href="/available" class="current">Available Puppies</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact us</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Floating Bubbles Header -->
+      <div class="floating-bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+
+      <h1>🐾 Available Puppies</h1>
+
+      <!-- Litter Information -->
+      <div class="litter-header">
+        <h2>🐾 Our Beautiful Doodles 🐾</h2>
+        <p class="litter-subtitle">
+          Aussiedoodles & Bernedoodles ready to steal your heart!
+        </p>
+
+        <div class="litter-description">
+          <p>
+            <strong
+              >We have some beautiful puppies for your consideration:</strong
+            >
+          </p>
+          <p>
+            Our puppies come in a rainbow of colors including Black Tri, Chocolate
+            Tri, Apricot, Sable Parti, and gorgeous Merles
+          </p>
+          <p><strong>All parents are health tested</strong></p>
+        </div>
+      </div>
+
+      <!-- Filter Section -->
+      <div class="filter-section">
+        <h3 class="filter-title">🔍 Filter Puppies</h3>
+        <div class="filter-groups">
+          <div class="filter-group">
+            <span class="filter-group-title">Breed</span>
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="breed" data-value="all">
+                All
+              </button>
+              <button class="filter-btn" data-filter="breed" data-value="aussiedoodle">
+                🌈 Aussiedoodles
+              </button>
+              <button class="filter-btn" data-filter="breed" data-value="bernedoodle">
+                🏔️ Bernedoodles
+              </button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-group-title">Gender</span>
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="gender" data-value="all">
+                All
+              </button>
+              <button class="filter-btn" data-filter="gender" data-value="male">
+                🐶 Males
+              </button>
+              <button class="filter-btn" data-filter="gender" data-value="female">
+                🐕 Females
+              </button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-group-title">Status</span>
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="status" data-value="all">
+                All
+              </button>
+              <button class="filter-btn" data-filter="status" data-value="available">
+                💚 Available
+              </button>
+              <button class="filter-btn" data-filter="status" data-value="reserved">
+                🧡 Reserved
+              </button>
+              <button class="filter-btn" data-filter="status" data-value="adopted">
+                💗 Adopted
+              </button>
+            </div>
+          </div>
+        </div>
+        <p class="puppy-count">Showing <span id="puppy-count">16</span> puppies</p>
+      </div>
+
+      <!-- Puppy Cards Grid -->
+      <div class="puppies-grid">
+        <!-- Puppy Card 1 - Sleepy Dwarf -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="male" data-status="adopted">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/pj73NVts/IMG-7677.png"
+              alt="Chocolate Aussiedoodle Puppy"
+            />
+            <div class="puppy-status adopted">Adopted</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Sleepy</div>
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="det data-gender="male" data-status="available"ail-value">Male</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Chocolate</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">20-35 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/20/25</div>
+              </div>
+            </div>
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                Meet Sleepy - the dreamy chocolate boy! This laid-back cuddle
+                bug loves naps and snuggles. With mama Sassy's confidence and
+                daddy Chip's gentle nature, he's the perfect balance of playful
+                and calm!
+              </div>
+            </div>
+            <div class="puppy-buttons">
+              <a href="/available/sleepy.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Puppy Card 2 - Grumpy -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="male" data-status="adopted">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/vvRgssXj/IMG-9809.png"
+              alt="Sable Parti Aussiedoodle Puppy"
+            />
+            <div class="puppy-status adopted">Adopted</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Grumpy</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Male</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Sable Parti</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">20-35 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/20/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                Meet Grumpy - our expressive sable charmer! Don't let the name
+                fool you - this comedian perfects adorable grumbles and
+                side-eyes before melting into puppy kisses, he's pure
+                personality!
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/grumpy.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Puppy Card 3 - Happy -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="male" data-status="adopted">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/CKJwCwcg/IMG-0554-2.png"
+              alt="Chocolate Aussiedoodle Puppy"
+            />
+            <div class="puppy-status adopted">Adopted</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Happy</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Male</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Chocolate Parti</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">20-35 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/20/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                Meet Happy - our chocolate parti sunshine boy! This eternal
+                optimist radiates pure joy with his perpetual smile and wagging
+                tail, he'll brighten even your cloudiest days!
+                <br />
+                <br />
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/happy.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Puppy Card 4 - Dopey -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="male" data-status="adopted">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/kgbwgjR7/IMG-0403.png"
+              alt="Chocolate Aussiedoodle Puppy"
+            />
+            <div class="puppy-status adopted">Adopted</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Dopey</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Male</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Sable Parti</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">20-35 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/20/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                Meet Dopey - our sable tri goofball! This resident clown
+                approaches life with wide-eyed wonder, tripping over his paws
+                and getting surprised by his own tail. he's double the fun!
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/dopey.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puppy Card 5 - Sneezy -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="female" data-status="adopted">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/S4TfPJVq/IMG-0523-2.png"
+              alt="Apricot Parti Aussiedoodle Puppy"
+            />
+            <div class="puppy-status adopted">Adopted</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Sneezy</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Female</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Apricot Parti</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">20-35 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/20/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                Meet Sneezy - our stunning apricot & white blue-eyed beauty!
+                This delicate darling has the sweetest, most gentle spirit,
+                she's elegance personified with mesmerizing blue eyes that will
+                steal your heart instantly!
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/sneezy.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puppy Card 6 - Bashful -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="female" data-status="adopted">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/cKpb17Nm/IMG-0018.png"
+              alt="Apricot Parti Aussiedoodle Puppy"
+            />
+            <div class="puppy-status adopted">Adopted</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Bashful</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Female</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Apricot Parti</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">12-20 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/20/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                Meet Bashful - our petite apricot firecracker! Don't let her
+                name fool you - this little dynamo is bursting with spunk and
+                sass, she is larger than life!!
+                <br />
+              </div>
+
+              <p></p>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/bashful.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puppy Card 7 - Doc -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="female" data-status="adopted">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/RWv6TvH/IMG-0177.png"
+              alt="Sable Parti Aussiedoodle Puppy"
+            />
+            <div class="puppy-status adopted">Adopted</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Doc</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Female</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Sable Parti</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">25-35 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/20/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                Meet Doc - our wise sable & white leader! This little
+                know-it-all has appointed herself litter supervisor with
+                opinions about everything.
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/doc.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puppy Card 8 -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="male" data-status="adopted">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/d4MRW5Zj/IMG-8976.png"
+              alt="Aussiedoodle Puppy"
+            />
+            <div class="puppy-status adopted">Adopted</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Yondu</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Male</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Chocolate</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">15-30 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/31/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                🍫 Yondu - Gorgeous deep chocolate coat meets loyal Guardian
+                personality! This sweet boy is all heart - confident yet cuddly.
+                Your new best friend is waiting! 💕
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/Yondu.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puppy Card 9 -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="male" data-status="reserved">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/XfVTdGsv/IMG-9777.png"
+              alt="Aussiedoodle Puppy"
+            />
+            <div class="puppy-status">Reserved</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Groot</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Male</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Black Tri</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">15-25 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/31/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                🖤 Groot - Larger Than Life Stunning black tri boy with that
+                classic beauty! Don't let his compact 15-25 lb size fool you -
+                Groot has a mighty personality. Calm, steady, deeply loyal, and
+                wonderfully grounded. The quiet observer with the biggest heart
+                who'll be your devoted shadow. We are Groot! 🌳💕
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/Groot.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puppy Card 10 -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="male" data-status="adopted">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/zc20FKG/IMG-9342.png"
+              alt="Aussiedoodle Puppy"
+            />
+            <div class="puppy-status adopted">Adopted</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Drax</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Male</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Chocolate Tri</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">20-35 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/31/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                💪 Drax -The Heartbreaker Stunning chocolate tri boy with RARE
+                BLUE EYES and four perfect white paws! This confident,
+                adventurous boy ready to take on the world with his family.
+                Active, loyal, and absolutely gorgeous - Drax is the total
+                package for families who love adventure!💙🐾
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/Drax.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puppy Card 11 -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="male" data-status="available">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/7xfgHmqL/IMG-9033.png"
+              alt="Aussiedoodle Puppy"
+            />
+            <div class="puppy-status">Available</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Rocket</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Male</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Chocolate Merle Parti</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">20-35 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/31/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                Rocket -The Mastermind One-of-a-kind chocolate merle boy with
+                serious personality! Rocket a clever mastermind who'll make you
+                laugh, and keep life endlessly entertaining. Big brains, bigger
+                charm, unique beauty. Your favorite troublemaker awaits! 🚀💕
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/Rocket.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puppy Card 12 -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="male" data-status="available">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/gMwG7KTz/IMG-9325.png"
+              alt="Aussiedoodle Puppy"
+            />
+            <div class="puppy-status">Available</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Starlord</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Male</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Black Tri <br />Parti</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">20-35 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/31/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                ⭐ Starlord - The Legend Who? Starlord, man! Gorgeous black tri
+                boy with striking white markings and serious charm. Your
+                adventure buddy and cuddle partner in one handsome package.
+                Natural leader, total heartthrob! 🌟💕
+                <br />
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/Starlord.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puppy Card 13 -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="female" data-status="adopted">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/DPqNdxh5/IMG-8983.png"
+              alt="Aussiedoodle Puppy"
+            />
+            <div class="puppy-status adopted">Adopted</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Gamora</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Female</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Blue Merle <br />Parti</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">20-35 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/31/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                💙 Gamora - The Warrior Princess Breathtaking blue merle parti
+                girl with spectacular coloring! Confident, athletic, and
+                graceful - Gamora is the total package. This warrior princess is
+                ready for adventure with an active family who can match her
+                energy and spirit. Simply stunning! 💙✨
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/Gamora.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puppy Card 14 -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="female" data-status="reserved">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/GvfHZvn1/IMG-9444.png"
+              alt="Aussiedoodle Puppy"
+            />
+            <div class="puppy-status">Reserved</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Ghost</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Female</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Chocolate Merle Parti</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">20-35 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/31/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                👻 Ghost - The Ethereal Beauty Stunning chocolate merle parti
+                girl with unique, otherworldly coloring! Sweet, gentle, and
+                deeply intuitive - Ghost has that special calming presence that
+                makes everyone feel at peace. A one-of-a-kind beauty with the
+                most beautiful soul! 👻💕
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/Ghost.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puppy Card 15 -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="female" data-status="reserved">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/JRk7b8fx/IMG-9543.png"
+              alt="Aussiedoodle Puppy"
+            />
+            <div class="puppy-status">Reserved</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Nebula</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Female</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Chocolate Tri & White</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">20-35 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/31/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                🤍 Nebula - The Starlight SweetheartGorgeous chocolate girl with
+                all four white paws - like she stepped in paint! Sweet, gentle,
+                and wonderfully affectionate. Nebula's unique markings are
+                matched only by her tender heart. Your perfect snuggle buddy
+                awaits! 🤍✨
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/Nebula.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Puppy Card 16 -->
+        <div class="puppy-card" data-breed="aussiedoodle" data-gender="female" data-status="adopted">
+          <div class="puppy-image">
+            <img
+              src="https://i.ibb.co/FbJ82vWL/IMG-9620.png"
+              alt="Aussiedoodle Puppy"
+            />
+            <div class="puppy-status adopted">Adopted</div>
+          </div>
+          <div class="puppy-info">
+            <div class="puppy-name">Yelena</div>
+
+            <div class="puppy-details">
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Female</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Color</div>
+                <div class="detail-value">Blue Merle <br />Parti</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Expected Size</div>
+                <div class="detail-value">20-35 lbs</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Ready Date</div>
+                <div class="detail-value">12/31/25</div>
+              </div>
+            </div>
+
+            <div class="puppy-personality">
+              <div class="personality-title">🌟 Personality Preview</div>
+              <div class="personality-traits">
+                💙 Yelena - The Fierce Firecracker Stunning blue merle parti
+                girl with gorgeous blue-gray tones! Fierce, fabulous, and full
+                of personality - Yelena is the perfect blend of independent
+                spirit and deep loyalty. Adventure buddy and cuddle partner in
+                one beautiful package! 💙⚡
+              </div>
+            </div>
+
+            <div class="puppy-buttons">
+              <a href="/available/Yelena.html" class="more-info-button">
+                More Info <i class="fa-solid fa-info-circle"></i>
+              </a>
+              <a
+                href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+                target="_blank"
+                class="apply-button"
+              >
+                Apply <i class="fa-solid fa-paw"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Application Section -->
+      <div class="application-section">
+        <h3>🐾 Ready to Welcome a New Family Member?</h3>
+        <p>
+          Apply to become part of our Doodle Dandy Family and discover how one
+          of our pups can bring endless joy and companionship to your home! Once
+          you have submitted your application we are happy to text, call or
+          video call with the puppies.
+        </p>
+        <a
+          href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+          target="_blank"
+          class="main-apply-button"
+        >
+          Apply Here <i class="fa-solid fa-paw"></i>
+        </a>
+      </div>
+
+      <!-- Gallery Section -->
+      <div class="gallery-section">
+        <h3>📸 Enjoy 🎥</h3>
+        <p>Fun play time</p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/9NpGUYWWNSo?si=xmW1QNdm8vBATz-9"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <p></p>
+
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/u7kMHLsDUsA?si=ljkZeJUzi5SEICG2"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="640"
+          height="360"
+          src="https://www.youtube.com/embed/NHtP3SlbKzQ?si=ym4-wZi9uqosHyDp"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+
+      <img
+        src="../assets/images/aussiedoodlepuptoon.png"
+        alt="Doodle Dandy Bernedoodle puppy"
+        class="dog"
+        style="
+          max-width: 300px;
+          height: auto;
+          margin: 40px auto;
+          display: block;
+        "
+      />
+    </main>
+
+    <footer>
+      <p>
+        © 2025 Doodle Dandy. All rights reserved. | Made with ❤️ for our puppy
+        families
+      </p>
+    </footer>
+
+    <script>
+      // Filter functionality
+      const filterState = {
+        breed: 'all',
+        gender: 'all',
+        status: 'all'
+      };
+
+      function filterPuppies() {
+        const puppyCards = document.querySelectorAll('.puppy-card');
+        let visibleCount = 0;
+
+        puppyCards.forEach(card => {
+          const cardBreed = card.dataset.breed;
+          const cardGender = card.dataset.gender;
+          const cardStatus = card.dataset.status;
+
+          const breedMatch = filterState.breed === 'all' || cardBreed === filterState.breed;
+          const genderMatch = filterState.gender === 'all' || cardGender === filterState.gender;
+          const statusMatch = filterState.status === 'all' || cardStatus === filterState.status;
+
+          if (breedMatch && genderMatch && statusMatch) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        // Update count
+        document.getElementById('puppy-count').textContent = visibleCount;
+      }
+
+      // Add click handlers to all filter buttons
+      document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', function() {
+          const filterType = this.dataset.filter;
+          const filterValue = this.dataset.value;
+
+          // Update filter state
+          filterState[filterType] = filterValue;
+
+          // Update active state for buttons in this group
+          const group = this.closest('.filter-group');
+          group.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          this.classList.add('active');
+
+          // Apply filters
+          filterPuppies();
+        });
+      });
+    </script>
+  </body>
+</html>
+">
