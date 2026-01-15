@@ -769,10 +769,10 @@
           <div class="filter-group">
             <span class="filter-group-title">Status</span>
             <div class="filter-buttons">
-              <button class="filter-btn active" data-filter="status" data-value="all">
+              <button class="filter-btn" data-filter="status" data-value="all">
                 All
               </button>
-              <button class="filter-btn" data-filter="status" data-value="available">
+              <button class="filter-btn active" data-filter="status" data-value="available">
                 💚 Available
               </button>
               <button class="filter-btn" data-filter="status" data-value="reserved">
@@ -1779,7 +1779,7 @@
       const filterState = {
         breed: 'all',
         gender: 'all',
-        status: 'all'
+        status: 'available'
       };
 
       function filterPuppies() {
@@ -1827,6 +1827,9 @@
           filterPuppies();
         });
       });
+
+      // Apply default filter on page load
+      filterPuppies();
     </script>
   </body>
 </html>
