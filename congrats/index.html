@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,54 +27,40 @@
       gtag("js", new Date());
       gtag("config", "G-XNTSJK2XH8");
     </script>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
+    <!-- Simple.css for main site styling -->
+    <link rel="stylesheet" href="../assets/vendor/simplecss/simple.min.css" />
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+
+    <style>
       body {
         font-family: "Georgia", serif;
-        line-height: 1.6;
-        color: #333;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         min-height: 100vh;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
       }
 
       .header-logo {
         max-width: 300px;
         height: auto;
-        margin: 0 auto 30px auto;
+        margin: 0 auto;
         display: block;
-        animation: fadeIn 1s ease-out 0.2s both;
-        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
       }
 
-      .header {
+      .page-title {
         text-align: center;
         color: white;
-        margin-bottom: 40px;
-        padding: 40px 0;
+        margin: 40px 0;
       }
 
-      .header h1 {
+      .page-title h1 {
         font-size: 3.5rem;
         margin-bottom: 10px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        animation: fadeInDown 1s ease-out;
       }
 
-      .header p {
+      .page-title p {
         font-size: 1.3rem;
         opacity: 0.9;
-        animation: fadeInUp 1s ease-out 0.3s both;
       }
 
       .hero-section {
@@ -363,13 +349,27 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <img
-          src="https://doodledandy.dog/assets/images/header.png"
-          alt="Doodle Dandy"
-          class="header-logo"
-        />
+    <header>
+      <img
+        src="../assets/images/header.png"
+        alt="Doodle Dandy - Aussiedoodle and Bernedoodle Breeder"
+        class="header-logo"
+      />
+      <nav>
+        <a href="/">Home</a>
+        <a href="/bernedoodle">Bernedoodles</a>
+        <a href="/aussiedoodle">Aussiedoodles</a>
+        <a href="/about">About us</a>
+        <a href="/news">News</a>
+        <a href="/available">Available Puppies</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact us</a>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="page-title">
         <h1>🎉 Congratulations! 🎉</h1>
         <p>Your new Doodle Dandy baby is coming home soon!</p>
       </div>
@@ -482,6 +482,6 @@
           </div>
         </div>
       </footer>
-    </div>
+    </main>
   </body>
 </html>
