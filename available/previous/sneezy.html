@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneezy - Mini Aussiedoodle | Doodle Dandy</title>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XNTSJK2XH8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XNTSJK2XH8");
+    </script>
+    <link rel="stylesheet" href="../../assets/vendor/simplecss/simple.min.css" />
+    <link
+      rel="stylesheet"
+      href="../../assets/vendor/fontawesome/6.2.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../assets/vendor/fontawesome/6.2.1/css/brands.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../assets/vendor/fontawesome/6.2.1/css/solid.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/styles/main.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <style>
+      /* Hero Section */
+      .puppy-hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+        margin: -20px -20px 40px -20px;
+        border-radius: 0 0 20px 20px;
+      }
+
+      .puppy-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .puppy-hero p {
+        font-size: 1.3rem;
+        opacity: 0.95;
+        margin-bottom: 20px;
+      }
+
+      .status-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        box-shadow: 0 8px 25px rgba(78, 205, 196, 0.3);
+        margin-top: 10px;
+      }
+      .status-badge.adopted {
+        background: linear-gradient(135deg, #e6a8a8 0%, #b2319c 100%);
+        box-shadow: 0 8px 25px rgba(230, 168, 172, 0.3);
+      }
+
+      /* Quick Info Section */
+      .quick-info {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin: 40px 0;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .info-item {
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 15px;
+      }
+
+      .info-label {
+        font-size: 0.9rem;
+        color: #6c757d;
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+
+      .info-value {
+        font-size: 1.3rem;
+        color: #2c3e50;
+        font-weight: 700;
+      }
+
+      /* Photo Gallery Grid */
+      .photo-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 40px 0;
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* About Section */
+      .about-section {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin: 40px 0;
+      }
+
+      .about-section h2 {
+        color: #2c3e50;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .about-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+
+      /* Apply Button */
+      .apply-section {
+        text-align: center;
+        margin: 50px 0;
+      }
+
+      .apply-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 20px 50px;
+        border: none;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+      }
+
+      .apply-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+      }
+
+      .back-link {
+        display: inline-block;
+        margin: 30px 0;
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+ .status-badge.reserved {
+        background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+        box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .quick-info {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .photo-gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .puppy-hero h1 {
+          font-size: 2rem;
+        }
+
+        .about-section {
+          padding: 25px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="../../assets/images/header.png" alt="Doodle Dandy" />
+      <nav>
+        <a href="/">Home</a>
+        <a href="/bernedoodle/">Bernedoodles</a>
+        <a href="/about">About us</a>
+        <a href="/news">News</a>
+        <a href="/available">Available Puppies</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact us</a>
+      </nav>
+    </header>
+
+    <main>
+      <a href="/available" class="back-link">← Back to Available Puppies</a>
+
+      <!-- Hero Section -->
+      <div class="puppy-hero">
+        <h1>🤧 Meet Sneezy</h1>
+        <p>The Blue Eyed Apricot Parti</p>
+        <span class="status-badge" style="background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); box-shadow: 0 8px 25px rgba(155, 89, 182, 0.3); margin-right: 10px;">Previous Litter</span>
+        <span class="status-badge adopted">Adopted</span>
+
+      <!-- Quick Info -->
+      <div class="quick-info">
+        <div class="info-item">
+          <div class="info-label">Gender</div>
+          <div class="info-value">Female</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Color</div>
+          <div class="info-value">Apricot & White</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Expected Size</div>
+          <div class="info-value">20-35 lbs</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Ready Date</div>
+          <div class="info-value">12/20/25</div>
+        </div>
+      </div>
+
+      <!-- Photo Gallery -->
+      <h2
+        style="
+          text-align: center;
+          color: #2c3e50;
+          font-size: 2rem;
+          margin: 40px 0 20px 0;
+        "
+      >
+        📸 Photo Gallery
+      </h2>
+      <div class="photo-gallery">
+        <div class="gallery-item">
+          <img src="https://i.ibb.co/wNkRnGDc/IMG-0491-2.png" alt="Photo 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.ibb.co/VcRPggcQ/IMG-0482-2.png" alt="Photo 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.ibb.co/S4TfPJVq/IMG-0523-2.png" alt="Photo 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.ibb.co/zWyTWBsF/IMG-0163.png" alt="Photo 4" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.ibb.co/prs9xd72/IMG-0191.png" alt="Photo 5" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.ibb.co/SGFnNyp/IMG-0601-2.png" alt="Photo 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.ibb.co/1tD0H7fC/IMG-0627-2.png" alt="Photo 7" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.ibb.co/SDk6kDTg/IMG-0057.png" alt="Photo 8" />
+        </div>
+      </div>
+
+      <!-- Apply Section -->
+      <div class="apply-section">
+        <h2 style="color: #82b2e2; margin-bottom: 20px">
+          Ready to Welcome Sneezy Home?
+        </h2>
+        <a
+          href="https://doodledandy.notion.site/2074d34a81b281a09bdfd4048017df18"
+          target="_blank"
+          class="apply-button"
+        >
+          Apply for Sneezy <i class="fa-solid fa-paw"></i>
+        </a>
+      </div>
+      <!-- About Sneezy -->
+      <div class="about-section">
+        <h2>🌟 About Sneezy</h2>
+        <p>🌸 MEET SNEEZY - THE AMAZING APRICOT & WHITE BLUE EYED BEAUTY! 🌸</p>
+        <p>
+          Introducing Sneezy, our absolutely stunning apricot and white girl
+          from the Seven Dwarfs litter! With her gorgeous coat and those
+          mesmerizing blue eyes, this little princess is a true showstopper!
+          💙✨
+        </p>
+        <p>
+          Sneezy is our delicate darling with the sweetest, most gentle spirit!
+          She's dainty, she's precious, and she has a way of making everyone
+          stop and say "awww!" She's the puppy equivalent of a soft spring
+          breeze - refreshing, lovely, and impossible not to adore! 🌺💕
+        </p>
+        <p>
+          This beautiful girl has a sensitive soul and loves nothing more than
+          gentle cuddles and quiet moments with her favorite people! She's
+          observant, thoughtful, and has already perfected the art of the head
+          tilt that melts hearts! 🎀
+        </p>
+        <p>
+          With mama Sassy's grace and daddy Chip's gentle nature, Sneezy is
+          elegance personified! Those stunning blue eyes will look right into
+          your soul and steal your heart in an instant! 🏔️ This apricot angel is
+          ready to bring beauty, sweetness, and tender love to her forever
+          family! Hi-Ho, Hi-Ho, it's off to cuddle we go! 🌸✨
+        </p>
+      </div>
+
+      <a href="/available" class="back-link">← Back to Available Puppies</a>
+    </main>
+
+    <footer>
+      <p>
+        © 2025 Doodle Dandy. All rights reserved. | Made with ❤️ for our puppy
+        families
+      </p>
+    </footer>
+  </body>
+</html>
